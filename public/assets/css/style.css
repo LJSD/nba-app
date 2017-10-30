@@ -16,15 +16,30 @@ img {
 
 /* COMMON CLASSES */
 .primary-text {
-	color: #56a79a;
+	color: white;  
+	
 }
 .primary-background {
-	color: #56a79a;
+	color: #FFA500;
 }
 
 /* HEADER */
 #main-header {
-	border-bottom: 1px solid #56a79a;
+	border-bottom: 1px solid black;
+	background-color: #000066; 
+}
+.hero-text {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	font-size: 30px;
+
+}
+.logo {
+	vertical-align: middle;
+	margin-left: -26px;
+	display: inline-block;
 }
 
 /* NAVBAR */
@@ -38,19 +53,22 @@ img {
 }
 #navbar a {
 	text-decoration: none;
-	color: #888;
+	color: grey;	
 }
 
 #navbar li.current a, #navbar a:hover {
-	color: #56a79a;
-	border-bottom: 3px solid #56a79a; 
+	color: white;
+	border-bottom: 3px solid #FFA500; 
 	padding-bottom: 3px;
 }
 
 /* SHOWCASE */
+h1 {
+	color: #FFA500;
+}
 #showcase {
-	background: url("../images/showcase.jpg") no-repeat center center;
-	border-bottom: 1px solid #56a79a; 
+	background: url("../images/basketball6.jpg") no-repeat center center;
+	border-bottom: 1px solid black; 
 	margin-bottom: 30px;
 }
 #showcase .row {
@@ -88,7 +106,7 @@ img {
 }
 #features .fa {
 	font-size: 60px;
-	color: #56a79a;
+	color: #000066;
 }
 
 /* INFO */
@@ -138,8 +156,8 @@ img {
 
 /* FOOTER */
 #main-footer {
-	background: #56a79a;
-	color: #fff;
+	background: #000066;
+	color: grey;
 }
 
 /* PAGE */
@@ -148,28 +166,14 @@ img {
 	margin-bottom: 40px;
 }
 
-/* SERVICES */
-.services ul li {
-	list-style: none;
-	padding: 10px;
-}
-
-.services ul li:nth-child(odd) {
-	background: #333;
-	color: #fff;
-}
-
-.services ul li:nth-child(even) {
-	background: #56a79a;
-	color: #fff;
-}
-
 /* CONTACT */
 
 .contact form {
-	background: #333;
-	color: #fff;
+	background: #ccc;
+	color: black;
 	padding: 20px;
+	width: 100%;
+
 }
 
 .contact form input[type="text"] {
@@ -182,7 +186,7 @@ img {
 	height: 100px;
 }
 .contact form button {
-	width: 50%;
+	width: 10%;
 	padding: 10px 0;
 	border: 0;
 	background: #222;
@@ -190,6 +194,9 @@ img {
 }
 .contact form label {
 	text-transform: uppercase;
+}
+.contact-text {
+	color: #FFA500;
 }
 /* MEDIA QUEIRIES */
 @media(max-width: 800px) {
