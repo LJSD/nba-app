@@ -166,38 +166,88 @@ h1 {
 	margin-bottom: 40px;
 }
 
-/* CONTACT */
-
+/* SIGN UP */
 .contact form {
-	background: #ccc;
 	color: black;
 	padding: 20px;
 	width: 100%;
-
 }
 
-.contact form input[type="text"] {
-	width: 50%;
-	height: 30px;
-	margin-bottom: 10px;
+.box{
+  background: #E8E8E8;
+  border-radius: 6px;
+  width: 400px;
+  height: 250px;
+  margin: 0 auto 0 auto;
+  padding: 0px 0px 70px 0px;
+  border: grey 1px solid; 
 }
-.contact form textarea {
-	width: 50%;
-	height: 100px;
+
+.email{
+  background:#ecf0f1;
+  border: #aaa 2px solid;
+  border-bottom: #aaa 3px solid;
+  padding: 8px;
+  width:300px;
+  color:#AAAAAA;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:4px;
 }
-.contact form button {
-	width: 10%;
-	padding: 10px 0;
-	border: 0;
-	background: #222;
-	color: #fff;
+
+.password{
+  border-radius: 4px;
+  background: #ecf0f1;
+  border: #ccc 1px solid;
+  padding: 8px;
+  width: 300px;
+  font-size: 1em;
 }
-.contact form label {
-	text-transform: uppercase;
+
+.btn{
+  background:#FFA500;
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:grey;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  margin-top:30px;
+  margin-bottom:20px;
+  float:left;
+  margin-left: 70px;
+  font-weight: 800;
+  font-size: 0.8em;
 }
-.contact-text {
-	color: #FFA500;
+
+.btn:hover{
+  background: #f2a202; 
 }
+
+#btn2{
+  float:left;
+  background:#000066;
+  width:125px;  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #2980b9 1px solid;
+  
+  margin-top:30px;
+  margin-bottom:20px;
+  margin-left:10px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+#btn2:hover{ 
+background:#0707b7; 
+}olor: #FFA500;
+}
+
+
+
+
 /* MEDIA QUEIRIES */
 @media(max-width: 800px) {
 	#showcase h1 {
