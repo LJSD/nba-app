@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Stats</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header id="main-header">
+	<!-- Container consolidates evertyhng into a certain percentage of the screen -->
+		<div class="container"> 
+		<!-- Aligning to the right -->
+		<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+		<!-- col-xs-12 is for small devices; the table will be displayed as one column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<span class="primary-text"><h1 class="hero-text">nbaStats</h1>&nbsp;</span>
+				<span><img src="assets/images/basketball11.png" class="logo" style="width: 60px"></span>
+			</div>
+
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+				<nav id="navbar">
+					<ul>
+						<li>
+							<input type="search" placeholder="Search Player" id="searchBar">	
+						</li>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="about.html">Features</a></li>
+						<li><a href="contact.html">Sign Up</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>			
+		</div>
+	</header>
+
+	<!-- Player Info -->
+	<section id="playerStats">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="player">
+					<h2>Stephen Curry</h2>
+					<img src="http://a.espncdn.com/i/infographics/20151124_warriors/warriors4d.png">
+					<h2>Golden State Warriors</h2>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="statistics">
+					<div class="row">
+						<canvas id="graphs" height="600px" width="600px"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+	<!-- COMPANY-->
+	<section id="company">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<h4>Contact Us</h4>
+					<ul>
+						<li><i class="fa fa-phone"></i> (111) 222 333</li>
+						<li><i class="fa fa-envelope"></i> nbastats@nbastats.com</li>
+						<li><i class="fa fa-map"></i> UC Berkeley Extension, CA</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<h4>About Us</h4>
+					<p>Not sure.</p>
+				</div>
+				
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<h4>Newsletter</h4>
+					<p>Please sign up for our weekly newsletter</p>
+					<form>
+						<input type="text" name="email" placeholder="Enter Email">
+						<button type="submit" name="button">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- FOOTER -->
+	<footer id="main-footer">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p>Copyright &copy; 2017 | NBA Stats</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
