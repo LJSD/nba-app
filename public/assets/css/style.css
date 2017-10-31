@@ -50,6 +50,7 @@ img {
 	display: inline;
 	padding-right: 20px;
 	list-style: none;
+	align-items: right;
 }
 #navbar a {
 	text-decoration: none;
@@ -62,12 +63,17 @@ img {
 	padding-bottom: 3px;
 }
 
+#searchBar {
+	font-family: "Open-sans", sans-serif;
+}
+
 /* SHOWCASE */
 h1 {
 	color: #FFA500;
 }
 #showcase {
 	background: url("../images/basketball6.jpg") no-repeat center center;
+	background-size: cover;
 	border-bottom: 1px solid black; 
 	margin-bottom: 30px;
 }
@@ -91,6 +97,57 @@ h1 {
 	padding: 40px;
 	opacity: 0.9;
 }
+
+/* playerStats*/
+h1 {
+	color: #FFA500;
+}
+#playerStats {
+	/*background: url("../images/basketball6.jpg") no-repeat center center;*/
+	background-size: cover;
+	border-bottom: 1px solid black; 
+	margin-bottom: 30px;
+}
+#playerStats.row {
+	height: 600px;
+}
+
+#playerStats h2 {
+	font-size: 35px;
+	padding-bottom: 20px;
+}
+#playerStats p {
+	color: #ccc;
+	margin: 0;
+}
+#playerStats .stats-content {
+	background-color: #333;
+	color: #fff;
+	border-radius: 90px;
+	padding: 40px;
+	opacity: 0.9;
+}
+
+#player {
+	text-align: center;
+}
+
+#statistics {
+	display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+#videos {
+	align-self: flex-end;
+	margin-bottom: 30px;
+}
+
+#graphs {
+	background-color: black;
+}
+
+
 
 /* FEATURES */
 #features h2 {
