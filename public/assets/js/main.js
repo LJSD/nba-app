@@ -53,9 +53,10 @@ $(function() {
 
 //PlayerStats Graphs
 
- var graph = $("#graphs").html();
+ var ctx = document.getElementById("graphs").getContext('2d');
+ console.log("ctx is ",ctx)
 
- var myChart = new Chart(graph, {
+ var graphs = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
