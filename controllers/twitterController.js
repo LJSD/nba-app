@@ -9,7 +9,7 @@ router.get("/api/twitter", function(req,res){
 	var client = new Twitter(
 		twitterKeys
 	);
-	var params = {screen_name: 'Mike Red'};
+	var params = {screen_name: 'nba'};
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 		if (error) throw error;
 	  // console.log("got the request!!");
