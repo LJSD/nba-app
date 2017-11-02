@@ -1,22 +1,29 @@
-// Set up MySQL connection.
-var mysql = require("mysql");
+// Setting up connection to mySQL
+// Dependencies
+var Sequelize = require("sequelize");
 
+var mysqlUser = {
+  "database": "NBA_Stats",
+  "username": "root",
+  "password": "alttimtal"
+}
 var connection = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
-  password: "my456123",
-  database: "userSignUp_db"
 });
 
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
+
+// Creates mySQL connection using Sequelize
+var sequelize = new Sequelize(mysqlUser.database, mysqlUser.username, mysqlUser.password, {
+  host: "localhost",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
   }
-  console.log("connected as id " + connection.threadId);
 });
 
-// Export connection for our ORM to use.
-module.exports = connection;
+// Exports the connection for other files to use
+module.exports = sequelize;
