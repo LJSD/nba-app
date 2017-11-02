@@ -1,29 +1,24 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+// Dependencies
 
-var user = {
-  all: function(cb) {
-    orm.all("user", function(res) {
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("users", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    orm.update("users", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
-  delete: function(condition, cb) {
-    orm.delete("users", condition, function(res) {
-      cb(res);
-    });
-  }
-};
+//Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references connection to the DB.
+var sequelize = require("../config/connection.js");
 
-// Export the database functions for the controller (catsController.js).
-module.exports = user;
+// Creates a "User" model that matches up with DB
+var User = sequelize.define("account", {
+  email: {
+    type: Sequelize.STRING
+  },
+  password: {
+    type: Sequelize.STRING
+  },
+}, {
+  timestamps: false
+});
+
+// Syncs with DB
+User.sync();
+
+// Makes the User Model available for other files (will also create a table)
+module.exports = User;

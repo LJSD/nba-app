@@ -25,7 +25,8 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li class="current"><a href="current">Sign Up</a></li>
+						<li><a href="player.html">Player Stats</a></li>
+						<li class="current"><a href="#">Sign Up</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -40,16 +41,23 @@
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<form class="signup-form" action="contact.html">
 						<div class="box">
-							<h1>Sign Up or Login</h1>
-							<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" 
-							onblur="field_blur(this, 'email');" class="email" />  
-							<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" 
-							onblur="field_blur(this, 'email');" class="email" />
-							<a href="#"><div class="btn">Sign In</div></a> <!-- End Btn -->
-							<a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+							<h1>Sign Up!</h1>
+							<input type="name" name="name" value="First Name" onFocus="field_focus(this, 'name');" 
+							onblur="field_blur(this, 'name');" class="name" />  
+							<input type="lastName" name="lastName" value="Last Name" onFocus="field_focus(this, 'lastName');" 
+							onblur="field_blur(this, 'lastName');" class="lastName" /> 
+							<input type="email" name="email" value="Email" onFocus="field_focus(this, 'email');" 
+							onblur="field_blur(this, 'email');" class="email" /> 
+							<input type="password" name="password" value="Password" onFocus="field_focus(this, 'password');" 
+							onblur="field_blur(this, 'password');" class="password" />
+							<input type="password" name="password" value="Confirm Password" onFocus="field_focus(this, 'password');" 
+							onblur="field_blur(this, 'password');" class="password" />
+							<!-- <a href="#"><div class="btn">Sign In</div></a>  -->
+							<!-- End Btn -->
+							<a href="#"><div id="btn2">Submit</div></a> <!-- End Btn2 -->
 						</div> <!-- End Box -->
+						<p class="login-text">Already have an account? <u style="color:#f1c40f;">Log in!</u></p>			
 					</form>
-					<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>			
 				</div>
 			</div>
 		</div>
