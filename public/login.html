@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NBA Stats</title>
+	<title>NBA Stats | Contact</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
-	<script type="text/javascript" src="./assets/js/main.js"></script>
-</head>
+	 <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+</head>
 <body>
 	<!-- HEADER -->
 	<header id="main-header">
@@ -26,16 +22,12 @@
 				<span><img src="assets/images/basketball11.png" class="logo" style="width: 60px"></span>
 			</div>
 
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">			
 				<nav id="navbar">
 					<ul>
-						<li>
-							<input type="search" placeholder="Search Player" id="searchBar">	
-						</li>
-						<li class="current"><a href="index.html">Home</a></li>
-						
-						<li><a href="about.html">Features</a></li>
-						<li><a href="myaccount.html">My Account</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="features.html">Features</a></li>
+						<li class="current"><a href="myaccount.html">My Account</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -43,29 +35,27 @@
 		</div>
 	</header>
 
-	<!-- Player Info -->
-	<section id="playerStats">
+	<!-- MAIN PAGE -->
+	<section id="page" class="contact">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="player">
-					<h2>Stephen Curry</h2>
-					<img src="http://a.espncdn.com/i/infographics/20151124_warriors/warriors4d.png">
-					<h2>Golden State Warriors</h2>
-				</div>
-				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="statistics">
-					<div class="row">
-						<canvas id="graphs" height="600px" width="600px"></canvas>
-					</div>
-					<div id="secondSearch">
-						Search Players
-					</div>
-					<div>
-						<input type="search" name="search" id="bigSearch">
-					</div>
+			<div class="row center-xs center-sm center-md center-lg">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<form class="signup-form" style="border:1px solid #ccc" method='post'>
+						<label><b>Email</b></label>
+						<input type="text" placeholder="Enter Email" id="email" autofocus name="email" required>
+
+						<label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" id="password" name="psw" required>
+						<div class="clearfix">
+							<button type="submit" id="loginbtn">Login</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</div>		
-	</section>
+		</div>
+	</section> 
+	
+
 	<!-- COMPANY-->
 	<section id="company">
 		<div class="container">
@@ -81,7 +71,7 @@
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 					<h4>About Us</h4>
 					<p>Not sure.</p>
-				</div>
+					</div>
 				
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 					<h4>Newsletter</h4>
@@ -104,6 +94,11 @@
 			</div>
 		</div>
 	</footer>
-
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script  src="assets/js/main.js"></script>
+	<script>setLogin();</script>
 </body>
 </html>
