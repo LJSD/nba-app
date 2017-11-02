@@ -55,14 +55,15 @@
 
 	<!-- Player Info -->
 	<section id="playerStats">
-		<div class="container">
+		<div  class="container" id='playerPage'>
 			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="player">
+				<div class="col-xs-0 col-sm-1 col-md-1 col-lg-1"></div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="player">
 					<h2>Stephen Curry</h2>
 					<img src="http://a.espncdn.com/i/infographics/20151124_warriors/warriors4d.png">
 					<h2>Golden State Warriors</h2>
 				</div>
-				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="statistics">
+				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" id="statistics">
 					<div class="row">
 						<canvas id="graphs" height="600px" width="600px"></canvas>
 					</div>
@@ -71,6 +72,14 @@
 					</div>
 					<div>
 						<input type="search" name="search" id="bigSearch">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+					<div id="buttonList">
+						<button class="graphController">3-Point Percentage</button>
+						<button class="graphController">+/-</button>
+						<button class="graphController">PPG</button>
 					</div>
 				</div>
 			</div>
