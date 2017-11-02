@@ -317,3 +317,7 @@ background:#0707b7;
 		padding: 40px 10px;
 	}
 }
+#twitter-div{
+	height: 300px;
+	overflow: scroll;
+}

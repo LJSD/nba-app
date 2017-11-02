@@ -18,7 +18,6 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/userController.js");
-var routes = require("./controllers/twitterController.js");
 
 app.use("/", routes);
 
