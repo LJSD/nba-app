@@ -1,11 +1,13 @@
-CREATE DATABASE userSignUp_db;
-USE userSignUp_db;
+DROP DATABASE IF EXISTS userSignUp_db;
 
-CREATE TABLE userInfo
+CREATE DATABASE NBA_Stats;
+USE NBA_Stats;
+CREATE TABLE account
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
 	email varchar(255) NOT NULL,
+	password varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
-SELECT * FROM userInfo;
+DROP TABLE users;
+SELECT * FROM accounts;
