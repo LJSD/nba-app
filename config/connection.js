@@ -7,12 +7,6 @@ var mysqlUser = {
   "username": "root",
   "password": "alttimtal"
 }
-var connection = mysql.createConnection({
-  port: 3306,
-  host: "localhost",
-  user: "root",
-});
-
 
 // Creates mySQL connection using Sequelize
 var sequelize = new Sequelize(mysqlUser.database, mysqlUser.username, mysqlUser.password, {
