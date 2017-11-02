@@ -66,6 +66,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
           labels: colors,
           datasets: [{
               label: '# of Votes',
+              lineTension: 0.15,
               data: numberData,
               backgroundColor: [
                   'rgba(255, 159, 64, 0.2)'
