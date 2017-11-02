@@ -65,6 +65,9 @@ img {
 
 #searchBar {
 	font-family: "Open-sans", sans-serif;
+	width: 195px;
+	height: 28px;
+	font-size: 14.5px;
 }
 
 /* SHOWCASE */
@@ -75,7 +78,7 @@ h1 {
 	background: url("../images/basketball6.jpg") no-repeat center center;
 	background-size: cover;
 	border-bottom: 1px solid black; 
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 #showcase .row {
 	height: 600px;
@@ -165,10 +168,15 @@ h1 {
 }
 
 /* FEATURES */
+#features {
+	background-color: #f4f6f9;
+
+}
 #features h2 {
 	font-size: 35px;
 	margin: 0;
 	padding-bottom: 10px;
+	padding-top: 20px;
 }
 
 #features p {
@@ -353,6 +361,13 @@ button {
 	width: 40%;
 }
 
+/*Twitter feed style*/
+#twitter-div{
+	height: 300px;
+	overflow: scroll;
+}
+
+
 /* MEDIA QUEIRIES */
 @media(max-width: 800px) {
 	#showcase h1 {
@@ -369,8 +384,4 @@ button {
     .cancelbtn, .signupbtn {
        width: 100%;
     }
-}
-#twitter-div{
-	height: 300px;
-	overflow: scroll;
 }

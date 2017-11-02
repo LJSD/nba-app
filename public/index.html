@@ -13,24 +13,24 @@
 	<!-- Container consolidates evertyhng into a certain percentage of the screen -->
 		<div class="container"> 
 		<!-- Aligning to the right -->
-		<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
-		<!-- col-xs-12 is for small devices; the table will be displayed as one column -->
-			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-				<span class="primary-text"><h1 class="hero-text">nbaStats</h1>&nbsp;</span>
-				<span><img src="assets/images/basketball11.png" class="logo" style="width: 60px"></span>
-			</div>
+			<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+			<!-- col-xs-12 is for small devices; the table will be displayed as one column -->
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<span class="primary-text"><h1 class="hero-text">nbaStats</h1>&nbsp;</span>
+					<span><img src="assets/images/basketball11.png" class="logo" style="width: 60px"></span>
+				</div>
 
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
-				<nav id="navbar">
-					<ul>
-						<li><input type="search" placeholder="Search Player" id="searchBar"></li>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a href="features.html">Features</a></li>
-						<li><a href="myaccount.html">My Account</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>			
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+					<nav id="navbar">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li><a href="stats.html">Stats</a></li>
+							<li><a href="myaccount.html">My Account</a></li>
+							<li><input type="search" placeholder="Search Player or Team" id="searchBar"></li>
+						</ul>
+					</nav>
+				</div>
+			</div>			
 		</div>
 	</header>
 
@@ -48,18 +48,58 @@
 	</section>
 
 	<!-- FEATURES -->
-	<section id="features">
-		<div class="container">
+	<section id="features" id="trending-div">
+		<div class="container" >
 			<div class="row center-xs center-sm center-md center-lg">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h2>Latest News and Stats</h2>
 				<p>Trending Now</p>
 				<!-- ICON ROW 1 --> 
 					<div class="row center-xs center-sm center-md center-lg">					
-						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-							<i class="fa fa-newspaper-o" aria-hidden="true"></i><br>
-							<h4>Latest News</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="newsfeed-div">
+							<!-- start sw-rss-feed code --> 
+							<script type="text/javascript"> 
+							<!-- 
+							rssfeed_url = new Array(); 
+							rssfeed_url[0]="http://www.espn.com/espn/rss/nba/news";  
+							rssfeed_frame_width="250"; 
+							rssfeed_frame_height="300"; 
+							rssfeed_scroll="on"; 
+							rssfeed_scroll_step="6"; 
+							rssfeed_scroll_bar="off"; 
+							rssfeed_target="_blank"; 
+							rssfeed_font_size="12"; 
+							rssfeed_font_face=""; 
+							rssfeed_border="on"; 
+							rssfeed_css_url=""; 
+							rssfeed_title="on"; 
+							rssfeed_title_name="NBA News"; 
+							rssfeed_title_bgcolor="#000066"; 
+							rssfeed_title_color="#fff"; 
+							rssfeed_title_bgimage=""; 
+							rssfeed_footer="off"; 
+							rssfeed_footer_name="rss feed"; 
+							rssfeed_footer_bgcolor="#fff"; 
+							rssfeed_footer_color="#333"; 
+							rssfeed_footer_bgimage=""; 
+							rssfeed_item_title_length="50"; 
+							rssfeed_item_title_color="#666"; 
+							rssfeed_item_bgcolor="#fff"; 
+							rssfeed_item_bgimage=""; 
+							rssfeed_item_border_bottom="on"; 
+							rssfeed_item_source_icon="off"; 
+							rssfeed_item_date="off"; 
+							rssfeed_item_description="on"; 
+							rssfeed_item_description_length="120"; 
+							rssfeed_item_description_color="#666"; 
+							rssfeed_item_description_link_color="#333"; 
+							rssfeed_item_description_tag="off"; 
+							rssfeed_no_items="0"; 
+							rssfeed_cache = "52dd1f77ca84a413841bc70fb1673ff0"; 
+							//--> 
+							</script> 
+							<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+							<!-- end sw-rss-feed code -->
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-6">
 							<i class="fa fa-bar-chart" aria-hidden="true"></i><br>
@@ -75,34 +115,6 @@
 		</div>
 	</section>
 
-	<!-- COMPANY-->
-	<section id="company">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-					<h4>Contact Us</h4>
-					<ul>
-						<li><i class="fa fa-phone"></i> (111) 222 333</li>
-						<li><i class="fa fa-envelope"></i> nbastats@nbastats.com</li>
-						<li><i class="fa fa-map"></i> UC Berkeley Extension, CA</li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-					<h4>About Us</h4>
-					<p>Not sure.</p>
-				</div>
-				
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-					<h4>Newsletter</h4>
-					<p>Please sign up for our weekly newsletter</p>
-					<form>
-						<input type="text" name="email" placeholder="Enter Email">
-						<button type="submit" name="button">Submit</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!-- FOOTER -->
 	<footer id="main-footer">
 		<div class="container">
@@ -112,6 +124,6 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> 
 </body>
 </html>
