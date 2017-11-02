@@ -395,4 +395,7 @@ button {
     .cancelbtn, .signupbtn {
        width: 100%;
     }
+#twitter-div{
+	height: 300px;
+	overflow: scroll;
 }

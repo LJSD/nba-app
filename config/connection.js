@@ -1,5 +1,9 @@
 // Setting up connection to mySQL
 // Dependencies
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3577a600e4cc9439592887b52ac6df80cddc8bfe
 var Sequelize = require("sequelize");
 
 var mysqlUser = {
