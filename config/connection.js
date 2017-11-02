@@ -1,6 +1,7 @@
 // Setting up connection to mySQL
 // Dependencies
 
+<<<<<<< HEAD
 var Sequelize = require("sequelize");
 
 var mysqlUser = {
@@ -8,6 +9,15 @@ var mysqlUser = {
   "username": "root",
   "password": "alttimtal"
 }
+=======
+var connection = mysql.createConnection({
+  port: 3306,
+  host: "localhost",
+  user: "root",
+  password: "0038ratdog",
+  database: "userSignUp_db"
+});
+>>>>>>> 7201a0bfef78b1905d4035e5a79d5b8ce1bad169
 
 //mysqlUser.password = "Y@nkees1980";
 
