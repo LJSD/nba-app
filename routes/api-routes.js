@@ -1,7 +1,7 @@
 // A set of routes for displaying and saving data to the db
 // Dependencies
 
-var User = require("../models");
+var db = require("../models");
 
 // Routes
 module.exports = function(app) {
@@ -11,7 +11,7 @@ module.exports = function(app) {
         // Sequelize queries are asynchronous, which helps with percieved speed.
         // If we want something to be guaranteed to happen after the query, we'll use
         // the .then function
-        User.findAll({}).then(function(results) {
+        db.account.findAll({}).then(function(results) {
         // results are available to us inside the .then
         res.jsonp(results);
         });
@@ -22,7 +22,7 @@ module.exports = function(app) {
         console.log("User Data:");
         console.log(req.body);
 
-        User.create({
+        db.account.create({
         email: req.body.email,
         password: req.body.password,
         }).then(function(results) {
@@ -37,7 +37,7 @@ module.exports = function(app) {
         console.log("User Data Login:");
         console.log(req.body);
 
-        User.findOne({
+        db.account.findOne({
             where: {
                 email: data.email,
                 password: data.password

@@ -1,34 +1,4 @@
 $(document).ready(function() {
-  console.log('testing');
-  // Getting references to the name inout and player container, as well as the table body
-  var nameInput = $("#player-name");
-  // var playerList = $("tbody");
-  var playerContainer = $(".player-container");
-  // Adding event listeners to the form to create a new object, and the button to delete
-  // an player
-  $(document).on("submit", "#player-form", handlePlayerFormSubmit);
-  // $(document).on("click", ".delete-player", handleDeleteButtonPress);
-
-  // Getting the intiial list of players
-  // getplayers();
-
-  // A function to handle what happens when the form is submitted to create a new player
-  function handlePlayerFormSubmit(event) {
-    event.preventDefault();
-
-    console.log(nameInput);
-    // console.log(playerList);
-
-    // Don't do anything if the name fields hasn't been filled out
-    if (!nameInput.val().trim().trim()) {
-      return;
-    }
-    // Calling the upsertplayer function and passing in the value of the name input
-    createPlayer({
-      player_name: nameInput.val().trim(),
-      points: 5
-    });
-  }
 
   // A function for creating an player. Calls getplayers upon completion
   function createPlayer(playerData) {
