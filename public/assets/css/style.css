@@ -361,12 +361,45 @@ button {
 	width: 40%;
 }
 
-/*Twitter feed style*/
+/*Twitter feed*/
 #twitter-div{
 	height: 300px;
 	overflow: scroll;
 }
 
+/*Newsfeed*/
+#newsfeed-div {
+	margin-top: 10px;
+
+}
+#img-curry-shot {
+	box-shadow: 10px 10px 5px #666;
+}
+#curry-image-div {
+	/*margin-left: 10px;*/
+}
+
+#top-teams {
+	color: #FFA500;
+	font-weight: bold;
+}
+.trending-div {
+	background: url("../images/memorable2.jpg") no-repeat;
+	background-size: 100%;
+	background-attachment: fixed; 
+	text-align: center;
+	border-bottom: solid 1px black;
+	width: 100%;
+	background-color: #f4f6f9;
+	opacity: 0.9;
+}
+#container-trending {
+	background-color: #f4f6f9;
+	opacity: 0.9;
+}
+#logout-text {
+	margin-top: 100px;
+}
 
 /* MEDIA QUEIRIES */
 @media(max-width: 800px) {

@@ -92,32 +92,25 @@ function goBackToHome() {
     });
 };
 //Login
-function setLogin() {
+function setLoginButton() {
+    
     $("#loginbtn").on("click", function(event) {
         event.preventDefault();
         email = $('#email').val();
         password = $('#password').val();
-        loginAttempt(email, password);
+        var account = new Account();
+        account.doLogin(email, password, goToHome);
     });    
 };
 
-function loginAttempt(email, password){
-    $.post('/api/loginattempt', {"email":email, "password":password})
-    .done((result)=>{
-        let res = JSON.parse(result);
-        /* if successful, direct them to the home page */
-        if(res.success){
-            window.location.href = '../';
-        }
-        else{
-            $('#message_area').html("email/password incorrect"); 
-        }
-    })
-    .fail((error)=>{
-        console.log(error);
-    });
+function goToHome(success){
+    if(success){
+        window.location.href = "/";
+    }
+    else{
+        alert("Username or password incorrect");
+    }
 }
-
 
 addModal();
 searchOption();
