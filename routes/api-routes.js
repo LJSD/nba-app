@@ -1,7 +1,7 @@
 // A set of routes for displaying and saving data to the db
 // Dependencies
 
-var User = require("../models/user.js");
+var User = require("../models");
 
 // Routes
 module.exports = function(app) {
