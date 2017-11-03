@@ -12,15 +12,5 @@ module.exports = function(sequelize, DataTypes) {
     freezeTableName: true
   });
 
-//DEFINE ASSOCIATION HERE
-
-  // Player.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Player.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
-
   return Player;
 };
