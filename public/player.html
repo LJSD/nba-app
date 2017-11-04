@@ -10,7 +10,7 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
-	<script type="text/javascript" src="./assets/js/main.js"></script>
+	
 </head>
 
 <body>
@@ -64,8 +64,9 @@
 					<h2>Golden State Warriors</h2>
 				</div>
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" id="statistics">
+					<h1 id="currentChart">Points</h1>
 					<div class="row">
-						<canvas id="graphs" height="600px" width="600px"></canvas>
+						<canvas id="myChart" height="600px" width="600px"></canvas>
 					</div>
 					<div id="secondSearch">
 						Search Players
@@ -75,11 +76,32 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-
+					<div>
+						<h1>Last Game</h1>
+						<h3>Player Name</h3>
+						<table>
+							<tr id="catagories">
+								<th>Points</th>
+								<th>Assists</th>
+								<th>Rebounds</th>
+								<th>Steals</th>
+								<th>Blocks</th>
+							</tr>
+							<tr id="numbers">
+								<td>30</td>
+								<td>10</td>
+								<td>10</td>
+								<td>5</td>
+								<td>4</td>
+							</tr>
+						</table>
+					</div>
 					<div id="buttonList">
-						<button class="graphController">3-Point Percentage</button>
-						<button class="graphController">+/-</button>
-						<button class="graphController">PPG</button>
+						<button class="graphController">Points</button>
+						<button class="graphController">Rebounds</button>
+						<button class="graphController">Assists</button>
+						<button class="graphController">Steals</button>
+						<button class="graphController">Blocks</button>
 					</div>
 				</div>
 			</div>
@@ -123,6 +145,7 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="./assets/js/main.js"></script>
 
 </body>
 </html>
