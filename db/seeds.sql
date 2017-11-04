@@ -1,1 +1,0 @@
-INSERT INTO userInfo (name, email) VALUES ('Luna', "luna@luna.com");
