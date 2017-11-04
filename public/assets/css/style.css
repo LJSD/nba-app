@@ -456,7 +456,9 @@ button {
 	line-height: .5em;
 	text-align: center;
 	color: #cc5b06;
-
-
+}
+.date-div {
+	font-weight: bold;
+	color: red;
 }
 

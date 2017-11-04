@@ -12,7 +12,7 @@ NbaStatsAPI.prototype.loadScores = function(){
 	}).done(function(data){
 		var rows = data.resultSets[1].rowSet;
 		var j = 0;
-		var html = "<div> " + date + "</div>";
+		var html = "<div class='date-div'> " + date + "</div>";
 		for (var i = 0; i < rows.length; i++) {
 			if(j === 0) {
 				html += "<div class='main-div'>"
