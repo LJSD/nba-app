@@ -1,3 +1,4 @@
+
 //every time we load a page, we want to check if the user is logged in
 //Constructor
 function Account() {
@@ -8,7 +9,6 @@ function Account() {
 //is already logged in. 
 Account.prototype.checkLoginStatus = function(cb) {
 	var userInfo = this.getLoginInfo();
-	console.log("whatever" + userInfo);
 	if(userInfo){
 		this.doLogin(userInfo[0], userInfo[1], cb);
 	}
