@@ -177,7 +177,7 @@ h1 {
 #features p {
 	color: #888;
 	margin: 0;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 }
 #features .fa {
 	font-size: 60px;
@@ -454,5 +454,12 @@ button {
 }
 .date-div {
 	font-weight: bold;
+	color: red;
+}
+#trending-p {
+	font-style: italic;
+	font-weight: bold;
+	color: #484b4f;
+	padding-top: 20px;
 }
 
