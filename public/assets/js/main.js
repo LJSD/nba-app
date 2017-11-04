@@ -143,18 +143,18 @@ goBackToHome();
 // });
 
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //PlayerStats Graphs
 
 var ctx = document.getElementById("myChart").getContext("2d");
-=======
+// =======
 // data
 var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 var numberData = [12, 19, 3, 5, 2, 3];
 
  // var graph = $("#graphs").html();
  var ctx = document.getElementById("myChart").getContext("2d");
->>>>>>> highlights
+// >>>>>>> highlights
 
   var myChart = new Chart(ctx, {
       type: 'line',
@@ -183,8 +183,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
           }
       }
   });
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
   $(".graphController").on("click", function() {
     $("#currentChart").html($(this).html());
@@ -220,7 +220,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].borderColor = ["rgb(127,24,101)"];
         myChart.update();
     }
->>>>>>> highlights
+// >>>>>>> highlights
 
     myChart.update();
     console.log($(this).html());
