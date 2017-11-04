@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Player = sequelize.define("Players", {
+  var Players = sequelize.define("Players", {
     // Giving the player model a name of type STRING
     pid: DataTypes.INTEGER,
     player_name: DataTypes.STRING,
@@ -13,5 +13,14 @@ module.exports = function(sequelize, DataTypes) {
     freezeTableName: true
   });
 
-  return Player;
+  Players.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Players.hasMany(models.Stats, {
+       foreignKey: 'pid'
+       // targetKey: 'pid'
+    });
+  };
+
+  return Players;
 };
