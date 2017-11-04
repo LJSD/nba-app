@@ -105,6 +105,10 @@ h1 {
 h1 {
 	color: #FFA500;
 }
+
+#playerPage {
+	margin: 0;
+}
 #playerStats {
 	/*background: url("../images/basketball6.jpg") no-repeat center center;*/
 	background-size: cover;
@@ -158,15 +162,6 @@ h1 {
 
 }
 
-#videos {
-	align-self: flex-end;
-	margin-bottom: 30px;
-}
-
-#graphs {
-	background-color: black;
-}
-
 /* FEATURES */
 #features {
 	background-color: #f4f6f9;
@@ -182,7 +177,7 @@ h1 {
 #features p {
 	color: #888;
 	margin: 0;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 }
 #features .fa {
 	font-size: 60px;
@@ -448,9 +443,23 @@ button {
 }
 .main-div {
 	float:left;
-	width:200px;
+	width:170px;
 	border:1px solid #000;
 	margin:5px;
 	padding:5px;
+	height: 45px;
+	line-height: .5em;
+	text-align: center;
+	color: #cc5b06;
+}
+.date-div {
+	font-weight: bold;
+	color: red;
+}
+#trending-p {
+	font-style: italic;
+	font-weight: bold;
+	color: #484b4f;
+	padding-top: 20px;
 }
 
