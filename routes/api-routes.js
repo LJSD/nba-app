@@ -23,8 +23,8 @@ module.exports = function(app) {
         console.log(req.body);
 
         db.account.create({
-        email: req.body.email,
-        password: req.body.password,
+            email: req.body.email,
+            password: req.body.password,
         }).then(function(results) {
         // `results` here would be the newly created user
         res.end();

@@ -15,9 +15,26 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../assets/*"));
     });
 
-    // add route loads the myaccount.html page,
+    // add route loads the account.html page,
     // where users can create new account
-    app.get("/add", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/myaccount.html"));
+    app.get("/account", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/account.html"));
     });
+
+    app.get("/signup", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/signup.html"));
+    });
+
+    app.get("/stats", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/stats.html"));
+    });
+
+    app.get("/login", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/login.html"));
+    });
+     
+    app.get("/logout", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/logout.html"));
+    });
+
 };
