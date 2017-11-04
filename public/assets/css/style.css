@@ -448,9 +448,15 @@ button {
 }
 .main-div {
 	float:left;
-	width:200px;
+	width:170px;
 	border:1px solid #000;
 	margin:5px;
 	padding:5px;
+	height: 45px;
+	line-height: .5em;
+	text-align: center;
+	color: #cc5b06;
+
+
 }
 
