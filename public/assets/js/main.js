@@ -143,9 +143,18 @@ goBackToHome();
 // });
 
 
+<<<<<<< HEAD
 //PlayerStats Graphs
 
 var ctx = document.getElementById("myChart").getContext("2d");
+=======
+// data
+var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+var numberData = [12, 19, 3, 5, 2, 3];
+
+ // var graph = $("#graphs").html();
+ var ctx = document.getElementById("myChart").getContext("2d");
+>>>>>>> highlights
 
   var myChart = new Chart(ctx, {
       type: 'line',
@@ -174,4 +183,51 @@ var ctx = document.getElementById("myChart").getContext("2d");
           }
       }
   });
+<<<<<<< HEAD
+=======
 
+  $(".graphController").on("click", function() {
+    $("#currentChart").html($(this).html());
+
+    switch ($(this).html()) {
+
+      case "Points":  
+        myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        myChart.update();
+        break;
+    
+      case "Rebounds":  
+        myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(56,114,209)"];
+        myChart.update();
+        break;
+
+      case "Assists":
+        myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(55,178,164)"];
+        myChart.update();
+        break;
+    
+      case "Steals":
+        myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(125,168,33)"];
+        myChart.update();
+        break;
+    
+      case "Blocks":
+        myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(127,24,101)"];
+        myChart.update();
+    }
+>>>>>>> highlights
+
+    myChart.update();
+    console.log($(this).html());
+    console.log(myChart.data.datasets[0].backgroundColor)
+
+
+    
+    // $("#myChart").html().data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+
+  })
