@@ -50,12 +50,7 @@
 	<!-- TRENDING -->
 	<section id="features" class="trending-div">
 		<div id="container-trending">
-			<div class="row center-xs center-sm center-md center-lg">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h3>LATEST NEWS AND STATS</h3>
-					<p>Trending Now</p>
-				</div>
-			</div>	
+			
 				
 			<div class="row center-xs center-sm center-md center-lg">
 				<!-- NEWS --> 					
@@ -114,8 +109,15 @@
 					</div>
 				</div>
 				<!-- SHOWCASE IMAGE -->
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="curry-image-div">
-					<span><img src="assets/images/curry-shot.jpeg" id="img-curry-shot"></span>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row center-xs center-sm center-md center-lg">
+						<h3>LATEST NEWS AND STATS</h3>
+						<p>Trending Now</p>
+						<div id="score-container">
+							<div id="scores-div"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>	
 				</div>
 				<!-- TWITTER -->
 				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
@@ -167,6 +169,11 @@
 		};
 		var user = new Account();
 		user.checkLoginStatus(signupHTML);
+	</script>
+	<script type="text/javascript" src="assets/js/nba_stats_api.js"></script>
+	<script type="text/javascript">
+		var nbaStatsAPI = new NbaStatsAPI();
+		nbaStatsAPI.displayScores('scores-div');
 	</script>
 </body>
 </html>

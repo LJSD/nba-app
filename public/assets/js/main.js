@@ -110,6 +110,20 @@ function goToHome(success){
     else{
         alert("Username or password incorrect");
     }
+};
+
+function getFormattedDate(daysFromNow) {
+    if(!daysFromNow){ daysFromNow = -1; }
+    $today = new Date();
+    $yesterday = new Date($today);
+    $yesterday.setDate($today.getDate() + daysFromNow);
+
+    var $dd = $yesterday.getDate();
+    var $mm = $yesterday.getMonth()+1; //January is 0!
+
+    var $yyyy = $yesterday.getFullYear();
+    if($dd<10){$dd='0'+$dd} if($mm<10){$mm='0'+$mm} $yesterday = $mm+'/'+$dd+'/'+$yyyy;
+    return $yesterday;
 }
 
 addModal();
