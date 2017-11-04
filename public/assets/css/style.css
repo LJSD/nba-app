@@ -414,9 +414,10 @@ button {
     }
 }
 
-/* not a table...but yeah..a table */
+/* a table for scores*/
 .div-table {
 	display:table;
+	
 }
 .div-row {
 	display:table-row;
@@ -443,7 +444,7 @@ button {
 }
 .main-div {
 	float:left;
-	width:170px;
+	width:190px;
 	border:1px solid #000;
 	margin:5px;
 	padding:5px;
@@ -461,5 +462,6 @@ button {
 	font-weight: bold;
 	color: #484b4f;
 	padding-top: 20px;
+	text-align: center;
 }
 
