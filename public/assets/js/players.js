@@ -30,6 +30,7 @@ $(document).ready(function() {
         console.log(response);
         console.log(player);
         console.log('id: ' + player[i].player.ID);
+        var pid = player[i].player.ID;
         var firstName = player[i].player.FirstName;
         var lastName = player[i].player.LastName;
         var fullName = lastName + ', ' + firstName;
@@ -43,6 +44,7 @@ $(document).ready(function() {
         console.log(fullName, age, birthCountry, birthDate, height, position, weight);
 
         createPlayer({
+          pid: pid,
           player_name: fullName,
           age: age,
           birthCountry: birthCountry,
@@ -54,6 +56,7 @@ $(document).ready(function() {
       }
     });  
   }
+  playerProfiles(); 
 
   // var cummulativeStats = function() {
   //   //username and password required for ajax call
@@ -108,5 +111,5 @@ $(document).ready(function() {
   //   });  
   // }
   // cummulativeStats();
-  playerProfiles();    
+     
 });
