@@ -70,7 +70,7 @@ var weather = function(location, date) {
     dataType: 'json',
     async: false,
     success: function (){
-      alert('Query Sucessful'); 
+      alert('Weather Query Sucessful'); 
     }
   }).done(function(response) {
     console.log(response)
@@ -80,15 +80,27 @@ var weather = function(location, date) {
 
 };
 
-// gameLogStats();
-weather('new+york','2009-12-01');
+//add event listeners to call apis
 
-//Query Functions
+$('#gamelog').on('click', function(){
+  event.preventDefault();
+  gameLogStats();
+});
+
+$('#weather').on('click', function(){
+  weather('new+york','2009-12-01');
+});
+
+
+
+//////////////// Query Functions ////////////////////////
+
+//this is where we'll make the specific query requests
 function getPlayers() {
   $.get("/api/players", function(data) {
     console.log(data);
   });
 }
 
-// getPlayers();
+getPlayers();
 

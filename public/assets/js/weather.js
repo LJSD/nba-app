@@ -13,7 +13,7 @@ var weather = function() {
     dataType: 'json',
     async: false,
     success: function (){
-      alert('Query Sucessful'); 
+      alert('Weather Query Sucessful'); 
     }
   }).done(function(response) {
     console.log(response)
