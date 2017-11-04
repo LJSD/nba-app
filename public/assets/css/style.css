@@ -105,6 +105,10 @@ h1 {
 h1 {
 	color: #FFA500;
 }
+
+#playerPage {
+	margin: 0;
+}
 #playerStats {
 	/*background: url("../images/basketball6.jpg") no-repeat center center;*/
 	background-size: cover;
@@ -156,15 +160,6 @@ h1 {
 	font-size: 30px;
 	width: 600px;
 
-}
-
-#videos {
-	align-self: flex-end;
-	margin-bottom: 30px;
-}
-
-#graphs {
-	background-color: black;
 }
 
 /* FEATURES */
