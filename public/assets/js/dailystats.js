@@ -52,7 +52,5 @@ $(document).ready(function() {
     });  
   }
 
-  // cummulativeStats();
-  // playerProfiles();    
   dailyStats();
 });

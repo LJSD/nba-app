@@ -1,3 +1,5 @@
+//functions to query database
+
 function getPlayers() {
   $.get("/api/players", function(data) {
     console.log(data);
@@ -5,3 +7,5 @@ function getPlayers() {
 }
 
 getPlayers();
+
+module.exports = getPlayers;
