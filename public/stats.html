@@ -59,8 +59,17 @@
 					<div id="secondSearch">
 						Search Players
 					</div>
-					<div>
-						<input type="search" name="search" id="bigSearch">
+					<div id="playerChooser">
+						<!-- ADD SEARCH FUNCTIONALITY HERE -->
+						<input list="browsers">
+
+							<datalist id="browsers">
+							  <option value="Internet Explorer">
+							  <option value="Firefox">
+							  <option value="Chrome">
+							  <option value="Opera">
+							  <option value="Safari">
+							</datalist>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -107,6 +116,6 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="./assets/js/main.js"></script>
-
+	<script type="text/javascript" src="./assets/js/playerNames.js"></script>
 </body>
 </html>
