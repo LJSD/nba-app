@@ -30,6 +30,7 @@ module.exports = function(app) {
 
     //see if the user can log in using credentials
     app.post("/api/loginattempt", function(req, res) {
+        "use strict"
         let data = req.body;
         console.log("User Data Login:");
         console.log(req.body);
