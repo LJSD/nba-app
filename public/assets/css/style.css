@@ -105,7 +105,7 @@ h1 {
 	color: white;
 	margin: 0;
 	font-size: 23px;
-	color: #FFA500;
+	color: #ff6f02;
 	font-weight: bold;
 	text-shadow: 0 2px 2px #000;
 }
@@ -473,10 +473,9 @@ button {
 }
 .date-div {
 	font-weight: bold;
-	color: red;
+	color: #ff6f02;
 }
 #trending-p {
-	font-style: italic;
 	font-weight: bold;
 	color: #484b4f;
 	padding-top: 20px;
