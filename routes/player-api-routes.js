@@ -21,13 +21,13 @@ db.sequelize.query("SELECT Players.player_name, Stats.points FROM Players INNER 
     // In this case, just db.Post
     // console.log(db.Player);
     db.Players.findAll({
-      where: {
-        pid: '9298'
-      },
+      // where: {
+      //   pid: '9298'
+      // },
       include: [db.Stats]
     }).then(function(dbPlayers) {
       console.log(dbPlayers);
-      //res.json(dbPlayers);
+      res.json(dbPlayers);
     });
 
   });
