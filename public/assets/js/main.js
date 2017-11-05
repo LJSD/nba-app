@@ -15,8 +15,9 @@ function newAccount() {
         $.post("/api/new", newUser)
         // On success, run the following code
         .done(function(result) {
-            console.log(newUser); 
-            //loginAttempt(newUser.email, newUser.password);
+            var account = new Account();
+            account.setLoginInfo(newUser.email, newUser.password);
+            addModal();
         });
 
         // Empty each input box by replacing the value with an empty string
@@ -29,17 +30,10 @@ function newAccount() {
 // Function for generating a modal window after user signs up
 function addModal() {
     var modal = document.getElementById('myModal');
-    // Get the button that opens the modal
-    var btn = document.getElementById("signupbtn");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     // When the user clicks the button, open the modal 
-    if(btn){
-            btn.onclick = function() {
-            modal.style.display = "block";
-        }
-    }
-    
+    modal.style.display = "block";
     // When the user clicks on <span> (x), close the modal
     if(span){
             span.onclick = function() {
@@ -125,25 +119,10 @@ function getFormattedDate(daysFromNow) {
     if($dd<10){$dd='0'+$dd} if($mm<10){$mm='0'+$mm} $yesterday = $mm+'/'+$dd+'/'+$yyyy;
     return $yesterday;
 }
-
-addModal();
 searchOption();
 goBackToHome();
 
 
-//When the page loads, grab all of users
-// $.get("/api/all", function(data) {
-
-//   if (data.length !== 0 && newUser) {
-//     for (var i = 0; i < data.length; i++) {
-//       console.log(newUser);
-//     }
-//   }
-
-// });
-
-
-// <<<<<<< HEAD
 //PlayerStats Graphs
 
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -183,8 +162,6 @@ var numberData = [12, 19, 3, 5, 2, 3];
           }
       }
   });
-// <<<<<<< HEAD
-// =======
 
   $(".graphController").on("click", function() {
     $("#currentChart").html($(this).html());

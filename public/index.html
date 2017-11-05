@@ -16,8 +16,8 @@
 			<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
 			<!-- col-xs-12 is for small devices; the table will be displayed as one column -->
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-					<span class="primary-text"><h1 class="hero-text">nbaStats</h1>&nbsp;</span>
-					<span><img src="assets/images/basketball11.png" class="logo" style="width: 60px"></span>
+					<span><h1 class="hero-text">nbaStats</h1>&nbsp;</span>
+					<span><img src="assets/images/basketball11.png" class="logo" style="width: 40px"></span>
 				</div>
 
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
@@ -25,7 +25,8 @@
 						<ul>
 							<li  class="current"><a href="index.html">Home</a></li>
 							<li><a href="stats.html">Stats</a></li>
-							<li><a href="signup">Signup</a></li>
+							<li id="signup"><a href="signup">Signup</a></li>
+							<li id="login-link"><a href="login">Login</a></li>
 							<li><input type="search" placeholder="Search Player or Team" id="searchBar"></li>
 						</ul>
 					</nav>
@@ -40,7 +41,7 @@
 		<!-- This needs to be in the middle both horizontally and vertically, "middle" is responsible for vertical -->
 			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
 				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-7 showcase-content">
-					<h1>Welcome to <span class="primary-text">NBA Stats</span></h1>
+					<h1>Welcome to <span class="primary-text">nbaStats</span></h1>
 					<p>A portal for latest news and stats about basketball</p>
 				</div>
 			</div>
@@ -55,13 +56,6 @@
 			<div class="row center-xs center-sm center-md center-lg">
 				<!-- NEWS --> 					
 				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-					<!-- <div id="top-teams">
-						<span><img src="assets/images/lakers.png" id="img-lakers" style="width: 50px"></span>
-						<span><img src="assets/images/celtics.jpg" id="img-celtics" style="width: 50px"></span>
-						<span><img src="assets/images/warriors.png" id="img-warriors" style="width: 50px"></span>
-						<span><img src="assets/images/cavs.png" id="img-cavs" style="width: 50px"></span>
-						<span><img src="assets/images/spurs.png" id="img-spurs" style="width: 50px"></span>
-					</div> -->
 					<div id="newsfeed-div">
 						<!-- start sw-rss-feed code --> 
 						<script type="text/javascript"> 
@@ -126,27 +120,10 @@
 					<div id="twitter-div">
 						<a class="twitter-timeline" href="https://twitter.com/NBA?ref_src=twsrc%5Etfw">Tweets by NBA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-					<!-- <div id="top-teams">
-						<span><img src="assets/images/bulls.png" id="img-bulls" style="width: 50px"></span>
-						<span><img src="assets/images/rockets.png" id="img-rockets" style="width: 50px"></span>
-						<span><img src="assets/images/bucks.png" id="img-bucks" style="width: 50px"></span>
-						<span><img src="assets/images/heat.png" id="img-heat" style="width: 50px"></span>
-						<span><img src="assets/images/knicks.png" id="img-knicks" style="width: 50px"></span>
-					</div> -->
 				</div>
 			</div>
 		</div>				
 	</section>
-
-	<!-- <section id="trending-div">
-		<div class="container" id="container-trending">
-			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h1>Hello</h1>
-				</div>
-			</div>
-		</div>		
-	</section> -->
 
 	<!-- FOOTER -->
 	<footer id="main-footer">
@@ -164,10 +141,15 @@
   crossorigin="anonymous"></script>
   	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="assets/js/account.js"></script>
+	<!-- <script type="text/javascript" src="./assets/js/playerNames.js"></script> -->
+
 	<script type="text/javascript">
 		//instance of the main object
-		function signupHTML() {
-			$("#signup").html('<a href="/account">Account</a> &nbsp; <a href="/logout">Log Out</a>');
+		function signupHTML(success) {
+			if(success){
+				$("#signup").html('<a href="/account">Account</a>');
+				$("#login-link").html('<a href="/logout">Logout</a>');
+			}
 		};
 		var user = new Account();
 		user.checkLoginStatus(signupHTML);

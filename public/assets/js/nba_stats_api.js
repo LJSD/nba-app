@@ -11,7 +11,7 @@ NbaStatsAPI.prototype.loadScores = function(){
 		url: statsUrl,
 		dataType: "jsonp",
 	}).done(function(data){
-	console.log(data);
+	//console.log(data);
 
 		var rows = data.resultSets[1].rowSet;
 		var j = 0;

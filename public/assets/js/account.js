@@ -20,6 +20,7 @@ Account.prototype.doLogin = function(email, password, cb) {
 	    .done(function(result) {
 	        var res = JSON.parse(result);
 	        /* if successful, direct them to the home page */
+	        
 	        if(res.success){
 	        	self.setLoginInfo(email, password);
 	        	if(cb) {

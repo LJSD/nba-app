@@ -1,4 +1,5 @@
 
 USE nba_stats;
-SELECT * FROM PLAYERS;
+SELECT * FROM accounts;
 
+truncate table accounts;
