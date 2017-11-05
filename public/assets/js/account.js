@@ -41,6 +41,8 @@ Account.prototype.doLogin = function(email, password, cb) {
 Account.prototype.setLoginInfo = function(email, password) {
 	localStorage.setItem('email', email);
 	localStorage.setItem('password', password);
+	localStorage.setItem('loggedin', true);
+
 }
 //Checking to see if user has any localstorage info
 Account.prototype.getLoginInfo = function() {
@@ -52,6 +54,7 @@ Account.prototype.getLoginInfo = function() {
 Account.prototype.logout = function() {
 	var email = localStorage.removeItem('email');
 	var password = localStorage.removeItem('password');
+	localStorage.setItem('loggedin', false);
 	setTimeout(function() {
 		window.location.href = "/";
 	}, 2000);
