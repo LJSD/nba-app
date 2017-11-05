@@ -50,19 +50,6 @@ NbaStatsAPI.prototype.displayScores = function(div){
 	this.loadScores();
 }
 
-//Sports Feed API
-
-NbaStatsAPI.prototype.loadScores2 = function(){
-	var jDiv2 = this.jDiv2;
-	var statsUrl2 = "https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/cumulative_player_stats.json?playerstats=2PA,2PM,3PA,3PM,FTA,FTM";
-	var date = this.date;
-	$.ajax({
-		url: statsUrl2,
-		dataType: "jsonp",
-	}).done(function(data){
-	console.log(data);
-	});	
-};
 
 
 
