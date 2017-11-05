@@ -1,7 +1,7 @@
 var db = require("../models");
 module.exports = function(app) {
 
-db.sequelize.query("SELECT Players.player_name, Stats.points FROM nba.Players INNER JOIN Stats ON Players.pid=Stats.pid").then(function(data){
+db.sequelize.query("SELECT Players.player_name, Stats.points FROM Players INNER JOIN Stats ON Players.pid=Stats.pid").then(function(data){
   console.log(data);
 });
     // db.Players.findAll({
