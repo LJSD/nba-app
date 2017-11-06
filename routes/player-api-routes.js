@@ -43,4 +43,11 @@ db.sequelize.query("SELECT Players.player_name, Stats.points FROM Players INNER 
       res.json(dbStats);
     });
   });
+
+  app.get("/api/stats", function(req,res) {
+    db.Players.findAll({include:[db.Stats]}).then(function(stats) {
+      console.log(stats.pid)
+    })
+  })
+
 };
