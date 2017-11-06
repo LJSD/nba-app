@@ -380,20 +380,10 @@ button {
 
 /*Newsfeed*/
 #newsfeed-div {
-	margin-top: 10px;
+	margin-top: 30px;
 
 }
-#img-curry-shot {
-	box-shadow: 10px 10px 5px #666;
-}
-#curry-image-div {
-	/*margin-left: 10px;*/
-}
 
-#top-teams {
-	color: #FFA500;
-	font-weight: bold;
-}
 .trending-div {
 	background: url("../images/memorable2.jpg") no-repeat;
 	background-size: 100%;
@@ -462,14 +452,16 @@ button {
 }
 .main-div {
 	float:left;
-	width:300px;
-	border:1px solid #000;
+	width:280px;
+	border: 1px solid #000666;
 	margin:5px;
+	margin-left: 30px;
 	padding:5px;
 	height: 75px;
 	line-height: .5em;
 	text-align: center;
-	/*color: #cc5b06;*/
+	border-style: ridge;
+	background-color: #a2a2a5;
 }
 .date-div {
 	font-weight: bold;
@@ -481,4 +473,7 @@ button {
 	padding-top: 20px;
 	text-align: center;
 }
+#trending-span {
+	font-style: italic;
+} 
 
