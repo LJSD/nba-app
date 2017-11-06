@@ -7,7 +7,7 @@ function getPlayers() {
 
      var list = "<form><input id='playerSelect' list = 'browsers'> <datalist id = 'browsers'>";
      for (var i = 0; i < data.length; i++) {
-     	list += "<option value = '" + data[i].player_name + ' ' + data[i].pid + "'>"
+     	list += "<option value =" + data[i].pid + ">" + data[i].player_name + "</option>"
      };
 
      list += "</datalist></form>"
