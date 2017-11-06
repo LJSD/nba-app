@@ -194,6 +194,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
       case "Points":  
         myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        myChart.data.labels = date;
+        myChart.data.datasets[0].data = points;
         myChart.update();
         break;
     
@@ -231,3 +233,46 @@ var numberData = [12, 19, 3, 5, 2, 3];
     // $("#myChart").html().data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
 
   })
+  
+// ajax call for chart ------------------------------------
+      var date = [];
+      var points = [];
+      var rebounds = [];
+      var assists = [];
+      var steals = [];
+      var blocks = [];
+
+
+  $("#submit-btn").on("click", function(){
+      date = [];
+      points = [];
+      rebounds = [];
+      assists = [];
+      steals = [];
+      blocks = [];
+    var id = $("#searchBar").val().trim();
+    $.ajax("/api/stats/" + id,{
+      type: "GET"
+    }).then(function(data){
+      console.log(data);
+      console.log(data[0][0].points);
+
+      for(var i=0;i<data[0].length;i++){
+        newDate = moment(data[0][i].date, "x");
+        var formattedDate = moment(newDate).format("MM/DD/YYYY");
+        date.push(formattedDate);
+        points.push(data[0][i].points);
+        rebounds.push(data[0][i].rebounds);
+        assists.push(data[0][i].assists);
+        steals.push(data[0][i].steals);
+        blocks.push(data[0][i].blocks);
+      }
+      console.log(date);
+      console.log(points);
+      console.log(rebounds);
+      console.log(assists);
+      console.log(steals);
+      console.log(blocks);
+
+    });
+  });
