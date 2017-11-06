@@ -1,9 +1,15 @@
+html, body {
+	height: 100%;	
+}
 body {
 	font-family: "Open-sans", sans-serif;
 	font-size: 17px;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
 }
 
 img {
@@ -26,22 +32,6 @@ img {
 #main-header {
 	border-bottom: 1px solid black;
 	background-color: #000066; 
-}
-.hero-text {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	font-size: 30px;
-	color: white;
-	font-family: 'Bangers', cursive;
-	font-weight: normal;
-
-}
-.logo {
-	vertical-align: middle;
-	margin-left: -10px;
-	display: inline-block;
 }
 
 /* NAVBAR */
@@ -105,7 +95,6 @@ h1 {
 	color: white;
 	margin: 0;
 	font-size: 23px;
-	color: #ff6f02;
 	font-weight: bold;
 	text-shadow: 0 2px 2px #000;
 }
@@ -117,11 +106,12 @@ h1 {
 	opacity: 0.9;
 }
 .glitch {
-  color: white;
+  color: #ff6f02;
   font-size: 75px;
   position: relative;
   width: 280px;
   margin: 0 auto;
+  text-shadow: 0 5px 5px #000;
 }
 
 /* playerStats*/
@@ -184,7 +174,6 @@ h1 {
 	width: 600px;
 
 }
-
 /* FEATURES */
 #features {
 	background-color: #f4f6f9;
@@ -200,7 +189,6 @@ h1 {
 #features p {
 	color: #888;
 	margin: 0;
-	/*margin-bottom: 40px;*/
 }
 #features .fa {
 	font-size: 60px;
@@ -227,40 +215,10 @@ h1 {
 	font-size: 20px;
 }
 
-/* COMPANY */
-#company {
-	background: #333;
-	color: #fff;
-	padding: 10px 0;
-}
-#company h4 {
-	text-transform: uppercase;
-	margin-bottom: 0;
-}
-#company ul {
-	padding: 0;
-	list-style: none;
-	line-height: 2em;
-}
-#company input[type="text"] {
-	padding: 7px;
-}
-#company button {
-	background: #222;
-	color: #fff;
-	padding: 10px;
-	border: 0;
-}
-
 /* FOOTER */
 #main-footer {
 	background: #000066;
 	color: grey;
-}
-
-/* PAGE */
-#page {
-	margin-bottom: 40px;
 }
 
 /*MY ACCOUNT FORM*/
@@ -276,7 +234,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #000066;
+    background-color: #FFA500;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -285,18 +243,11 @@ button {
     width: 100%;
 }
 
-/* Extra styles for the cancel button */
-#cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-    margin-right: 20px;
-    margin-left: 100px;
-}
-
 /* Float cancel and signup buttons and add an equal width */
-#cancelbtn,#signupbtn {
-    float: left;
+#signupbtn {
+    /*float: left;*/
     width: 25%;
+    background-color: #FFA500;
 }
 #gohomebtn, #searchbtn {
     width: 25%;
@@ -314,6 +265,9 @@ button {
     content: "";
     clear: both;
     display: table;
+}
+.login-content {
+	flex: 1;
 }
 #login-text {
 	font-size: 13px;
