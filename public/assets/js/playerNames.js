@@ -32,7 +32,7 @@ function displayPlayer() {
     });
 };
 getPlayers();
-displayPlayer();
+// displayPlayer();
 
 // action='./assets/js/individualStats.js' method='get'
 
