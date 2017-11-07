@@ -10,7 +10,7 @@ function getPlayers() {
      	list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
      };
 
-     list += "</select></form>"
+     list += "  <option value='9218' selected>Curry, Stephen</option></select></form>"
 
      // console.log(list);
     	
@@ -30,7 +30,7 @@ function getPlayers2() {
         list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
      };
 
-     list += "</select></form>"
+     list += "  <option value='9298' selected>Barnes, Matt</option></select></form>"
 
      // console.log(list);
         
