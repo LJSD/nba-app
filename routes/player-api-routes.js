@@ -38,4 +38,11 @@ module.exports = function(app) {
       res.json(dbStats);
     });
   });
+
+  app.get("/api/stats", function(req,res) {
+    db.Players.findAll({include:[db.Stats]}).then(function(stats) {
+      console.log(stats.pid)
+    })
+  })
+
 };

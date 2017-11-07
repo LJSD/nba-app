@@ -59,21 +59,24 @@
 					</div>
 					<div id="playerChooser">
 						<!-- ADD SEARCH FUNCTIONALITY HERE -->
-						<input list="browsers">
+						<form>
+							<input id="playerSelect" list="browsers">
 
-							<datalist id="browsers">
-							  <option value="Internet Explorer">
-							  <option value="Firefox">
-							  <option value="Chrome">
-							  <option value="Opera">
-							  <option value="Safari">
-							</datalist>
+								<datalist id="browsers">
+								  <option value="Internet Explorer">
+								  <option value="Firefox">
+								  <option value="Chrome">
+								  <option value="Opera">
+								  <option value="Safari">
+								</datalist>
+						</form>
 					</div>
+					<button id="submitForm">Select Player</button>
 				</div>
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 					<div>
 						<h1>Last Game</h1>
-						<h3>Player Name</h3>
+						<h3 id="spotlight">Player Name</h3>
 						<table>
 							<tr id="catagories">
 								<th>Points</th>
