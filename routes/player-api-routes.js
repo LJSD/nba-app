@@ -10,6 +10,15 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/oneplayer:id", function(req, res) {
+    pid = req.params.id;
+    console.log(id);
+    db.sequelize.query("SELECT * FROM Players WHERE Players.id="+id)
+    .then(function(data){
+      res.json(data);
+    });
+  });
+
   app.get("/api/players", function(req, res) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join

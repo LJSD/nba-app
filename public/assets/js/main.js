@@ -172,6 +172,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
         myChart.data.datasets[0].data = points;
+        myChart.data.datasets[0].label = "Points";
         myChart.data.labels = date;
         myChart.update();
         break;
@@ -180,6 +181,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(56,114,209)"];
         myChart.data.datasets[0].data = rebounds;
+        myChart.data.datasets[0].label = "Rebounds";
         myChart.data.labels = date;
         myChart.update();
         break;
@@ -188,6 +190,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(55,178,164)"];
         myChart.data.datasets[0].data = assists;
+        myChart.data.datasets[0].label = "Assists";
         myChart.data.labels = date;
         myChart.update();
         break;
@@ -196,6 +199,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(125,168,33)"];
         myChart.data.datasets[0].data = steals;
+        myChart.data.datasets[0].label = "Steals";
         myChart.data.labels = date;
         myChart.update();
         break;
@@ -204,6 +208,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(127,24,101)"];
         myChart.data.datasets[0].data = blocks;
+        myChart.data.datasets[0].label = "Blocks";
         myChart.data.labels = date;
         myChart.update();
     }
@@ -259,9 +264,19 @@ var numberData = [12, 19, 3, 5, 2, 3];
         myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
         myChart.data.datasets[0].data = points;
         myChart.data.labels = date;
+        myChart.data.datasets[0].label = "Points";
         myChart.update();
     });
   };
+
+  function generatePlayerInfo(id) {
+    $.ajax("/api/oneplayer" + id,{
+      type: "GET"
+    }).then(function(data){
+      var player = data[0][0];
+      console.log(player)
+    });
+  }
 
   $("#submitForm").on("click", function(){
       var id = $("#browsers").val();
@@ -269,5 +284,6 @@ var numberData = [12, 19, 3, 5, 2, 3];
   });
   
   createChart("9218");
+  generatePlayerInfo("9218");
 
   // });
