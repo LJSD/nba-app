@@ -5,7 +5,7 @@ var Sequelize = require("sequelize");
 var mysqlUser = {
   "database": "NBA_Stats",
   "username": "root",
-  "password": "0038ratdog"
+  "password": "my456123"
 }
 
 // Creates mySQL connection using Sequelize

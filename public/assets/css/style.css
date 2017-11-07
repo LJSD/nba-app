@@ -139,13 +139,21 @@ h1 {
 #playerStats p {
 	color: #ccc;
 	margin: 0;
-}
+};
 #playerStats .stats-content {
 	background-color: #333;
 	color: #fff;
 	border-radius: 90px;
 	padding: 40px;
 	opacity: 0.9;
+}
+
+#browsers {
+	width:100%;
+	height: 30px;
+	font-size: 20px;
+	background-color: #000066;
+	color: white
 }
 
 #player {

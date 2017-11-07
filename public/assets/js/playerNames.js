@@ -5,12 +5,12 @@ function getPlayers() {
 
     div = $("#playerChooser")
 
-     var list = "<form><input id='playerSelect' list = 'browsers'> <datalist id = 'browsers'>";
+     var list = "<form><select id = 'browsers'>";
      for (var i = 0; i < data.length; i++) {
-     	list += "<option value = '" + data[i].player_name + ' ' + data[i].pid + "'>"
+     	list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
      };
 
-     list += "</datalist></form>"
+     list += "</select></form>"
 
      // console.log(list);
     	
@@ -22,8 +22,12 @@ function getPlayers() {
 
 function displayPlayer() {
     $("#submitForm").on("click", function() {
-        var player = $("#playerSelect").val();
+        var player = $("#browsers").val();
+        var text = $("#browsers :selected").text();
+
+        $("#spotlight").html('<h3>' + text + '</h3>');
         console.log(player);
+        console.log(text);
         console.log('hello world')
     });
 };
@@ -31,3 +35,6 @@ getPlayers();
 displayPlayer();
 
 // action='./assets/js/individualStats.js' method='get'
+
+// cut from line 8
+// <input id='playerSelect' list = 'browsers'>
