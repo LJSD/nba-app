@@ -40,9 +40,12 @@ module.exports = function(app) {
   });
 
   app.get("/api/stats", function(req,res) {
-    db.Players.findAll({include:[db.Stats]}).then(function(stats) {
-      console.log(stats.pid)
-    })
-  })
+    app.get("/api/stats/:id", function(req, res) {
+    db.sequelize.query("SELECT date, points, rebounds, assists, steals, blocks FROM players INNER JOIN stats ON players.pid=stats.pid where stats.pid=" + req.params.id + " limit 10").then(function(data){
+    // db.sequelize.query("SELECT Stats.date, Stats.points, Stats.rebounds, Stats.assists, Stats.steals, Stats.blocks FROM nba.Players INNER JOIN Stats ON Players.pid="+ req.params.id + " limit 10").then(function(data){
+    console.log(data);
+    res.json(data);
+    });
+  });
 
 };
