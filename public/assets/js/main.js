@@ -144,7 +144,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
               lineTension: 0.15,
               data: numberData,
               backgroundColor: [
-                  'rgba(255, 159, 64, 0.2)'
+                  'rgba(255, 159, 64, 0)'
               ],
               borderColor: [
                   'rgba(255, 159, 64, 1)'
@@ -155,7 +155,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
               lineTension: 0.15,
               data: numberData,
               backgroundColor: [
-                  'rgba(255, 159, 64, 0.2)'
+                  'rgba(255, 159, 64, 0)'
               ],
               borderColor: [
                   'rgba(255, 159, 64, 1)'
@@ -181,13 +181,13 @@ var numberData = [12, 19, 3, 5, 2, 3];
     switch ($(this).html()) {
 
       case "Points":  
-        myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = points;
         myChart.data.datasets[0].label = playerName;
         myChart.data.labels = date;
-        myChart.data.datasets[1].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,100,100)"];
+        // myChart.data.datasets[1].backgroundColor = ["rgba(255,100,100,0.2)"];
+        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = points2;
         myChart.data.datasets[1].label = playerName2;
         myChart.data.labels = date;
@@ -195,13 +195,13 @@ var numberData = [12, 19, 3, 5, 2, 3];
         break;
     
       case "Rebounds":  
-        myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(56,114,209)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = rebounds;
         myChart.data.datasets[0].label = playerName;
         myChart.data.labels = date;
-        myChart.data.datasets[1].backgroundColor = ["rgba(56, 114,209,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(56,114,209)"];
+        // myChart.data.datasets[1].backgroundColor = ["rgba(56, 114,209,0.2)"];
+        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = rebounds2;
         myChart.data.datasets[1].label = playerName2;
         myChart.data.labels = date;        
@@ -209,13 +209,13 @@ var numberData = [12, 19, 3, 5, 2, 3];
         break;
 
       case "Assists":
-        myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(55,178,164)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = assists;
         myChart.data.datasets[0].label = playerName;
         myChart.data.labels = date;
-        myChart.data.datasets[1].backgroundColor = ["rgba(55, 178, 164,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(55,178,164)"];
+        // myChart.data.datasets[1].backgroundColor = ["rgba(55, 178, 164,0.2)"];
+        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = assists2;
         myChart.data.datasets[1].label = playerName2;
         myChart.data.labels = date;
@@ -223,13 +223,13 @@ var numberData = [12, 19, 3, 5, 2, 3];
         break;
     
       case "Steals":
-        myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(125,168,33)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = steals;
         myChart.data.datasets[0].label = playerName;
         myChart.data.labels = date;
-        myChart.data.datasets[1].backgroundColor = ["rgba(125, 168, 33,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(125,168,33)"];
+        // myChart.data.datasets[1].backgroundColor = ["rgba(125, 168, 33,0.2)"];
+        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = steals2;
         myChart.data.datasets[1].label = playerName2;
         myChart.data.labels = date;
@@ -237,13 +237,13 @@ var numberData = [12, 19, 3, 5, 2, 3];
         break;
     
       case "Blocks":
-        myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(127,24,101)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = blocks;
         myChart.data.datasets[0].label = playerName;
         myChart.data.labels = date;
-        myChart.data.datasets[1].backgroundColor = ["rgba(127, 24, 101,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(127,24,101)"];
+        // myChart.data.datasets[1].backgroundColor = ["rgba(127, 24, 101,0.2)"];
+        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = blocks2;
         myChart.data.datasets[1].label = playerName2;
         myChart.data.labels = date;
@@ -309,11 +309,11 @@ var numberData = [12, 19, 3, 5, 2, 3];
       console.log(steals);
       console.log(blocks);
 
-        myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        // myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
         myChart.data.datasets[0].data = points;
         myChart.data.labels = date;
-        myChart.data.datasets[0].label = playerName," Points";
+        myChart.data.datasets[0].label = playerName;
         // myChart.update();
     });
     // -----------------------------------------------------------
@@ -344,11 +344,11 @@ var numberData = [12, 19, 3, 5, 2, 3];
       console.log(steals);
       console.log(blocks);
 
-        myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        // myChart.data.datasets[1].borderColor = ["rgb(155,100,100)"];
         myChart.data.datasets[1].data = points2;
         myChart.data.labels = date;
-        myChart.data.datasets[1].label = playerName2," Points";
+        myChart.data.datasets[1].label = playerName2;
         myChart.update();
     });
   };
