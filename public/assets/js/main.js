@@ -369,9 +369,11 @@ var numberData = [12, 19, 3, 5, 2, 3];
   });
   
   createChart("9218", "9298");
-  // myChart.data.datasets[0].label = "Stephan Points";
-  // myChart.data.datasets[1].label = "Green Points";
 
-
-
-  // });
+function displayLabelWhenPageLoad (){
+      myChart.data.datasets[0].label = "Curry, Stephen";
+      myChart.data.datasets[1].label = "Barnes, Matt";
+      myChart.update();
+      // console.log("timeout!!");
+};
+setTimeout(displayLabelWhenPageLoad, 1000 * 1);
