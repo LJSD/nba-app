@@ -75,11 +75,10 @@ var weather = function(location, date) {
   }).done(function(response) {
     console.log(response)
     var temperature = response.data.weather[0].maxtempF;
-    console.log(temperature);
+    console.log('max temp for the day: ' + temperature);
   });  
 
 };
-
 //add event listeners to call apis
 
 $('#gamelog').on('click', function(){
@@ -91,16 +90,29 @@ $('#weather').on('click', function(){
   weather('new+york','2009-12-01');
 });
 
+$('#get-players').on('click', function(){
+  getPlayers();
+});
 
-
-//////////////// Query Functions ////////////////////////
+//return player stats and points based on pid
+$('#player-stats').on('click', function(){
+  getPlayerStats('9298');
+});
 
 //this is where we'll make the specific query requests
+
+//query all player info from player table
 function getPlayers() {
   $.get("/api/players", function(data) {
     console.log(data);
   });
 }
 
-getPlayers();
+//query a specific players gamelogs with pid
+function getPlayerStats(pid) {
+  $.get("/api/stats"+pid, function(data) {
+    console.log(data[0])
+  });
+}
+
 

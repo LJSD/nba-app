@@ -1,7 +1,6 @@
 {
   "development": {
     "username": "root",
-
     "password": "0038ratdog",
     "database": "nba_stats",
     "host": "127.0.0.1",
