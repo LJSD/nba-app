@@ -10,10 +10,30 @@ function getPlayers() {
      	list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
      };
 
-     list += "</select></form>"
+     list += "  <option value='9218' selected>Curry, Stephen</option></select></form>"
 
      // console.log(list);
     	
+     div.html(list);
+
+    // console.log($("#playerChooser").html());
+  });
+}
+function getPlayers2() {
+  $.get("/api/players", function(data) {
+    // console.log(data);
+
+    div = $("#playerChooser2")
+
+     var list = "<form><select id = 'browsers2'>";
+     for (var i = 0; i < data.length; i++) {
+        list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
+     };
+
+     list += "  <option value='9298' selected>Barnes, Matt</option></select></form>"
+
+     // console.log(list);
+        
      div.html(list);
 
     // console.log($("#playerChooser").html());
@@ -32,6 +52,7 @@ function displayPlayer() {
     });
 };
 getPlayers();
+getPlayers2();
 // displayPlayer();
 
 // action='./assets/js/individualStats.js' method='get'

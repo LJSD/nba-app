@@ -66,6 +66,20 @@
 								<select id="browsers"></select>
 						</form>
 					</div>
+					<div id="playerChooser2">
+						<!-- ADD SEARCH FUNCTIONALITY HERE -->
+						<form>
+							<input id="playerSelect2" list="browsers2">
+
+								<select id="browsers2">
+								  <option value="Internet Explorer">
+								  <option value="Firefox">
+								  <option value="Chrome">
+								  <option value="Opera">
+								  <option value="Safari">
+								</select>
+						</form>
+					</div>
 					<button id="submitForm">Select Player</button>
 				</div>
 
@@ -117,7 +131,7 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  	<script type="text/javascript" src="assets/js/main.js"></script>
+  	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
 	<script type="text/javascript" src="assets/js/account.js"></script>
 	<script type="text/javascript" src="./assets/js/playerNames.js"></script>
 
@@ -133,6 +147,8 @@
 		user.checkLoginStatus(signupHTML);
 	</script>
 	<script type="text/javascript" src="assets/js/nba_stats_api.js"></script>
+	  	<script type="text/javascript" src="assets/js/main.js"></script>
+
 	<script type="text/javascript">
 		var nbaStatsAPI = new NbaStatsAPI();
 		nbaStatsAPI.displayScores('scores-div');
