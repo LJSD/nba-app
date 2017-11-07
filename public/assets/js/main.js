@@ -354,11 +354,11 @@ var numberData = [12, 19, 3, 5, 2, 3];
   };
 
   function generatePlayerInfo(id) {
-    $.ajax("/api/oneplayer" + id,{
+    $.ajax("/api/one" + id,{
       type: "GET"
     }).then(function(data){
       var player = data[0][0];
-      console.log(player)
+      console.log(player);
     });
   }
 
@@ -377,3 +377,7 @@ function displayLabelWhenPageLoad (){
       // console.log("timeout!!");
 };
 setTimeout(displayLabelWhenPageLoad, 1000 * 1);
+
+generatePlayerInfo('9298');
+
+
