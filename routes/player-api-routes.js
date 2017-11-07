@@ -2,7 +2,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   app.get("/api/stats:pid", function(req, res) {
-    pid = req.params.pid;
+    var pid = req.params.pid;
     console.log(pid);
     db.sequelize.query("SELECT * FROM Stats WHERE Stats.pid="+pid)
     .then(function(data){
@@ -10,8 +10,8 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/oneplayer:id", function(req, res) {
-    id = req.params.id;
+  app.get("/api/oneplayer/:id", function(req, res) {
+    var id = req.params.id;
     console.log(id);
     db.sequelize.query("SELECT * FROM Players WHERE Players.pid="+id)
     .then(function(data){
@@ -79,7 +79,7 @@ module.exports = function(app) {
       // },
       include: [db.Stats]
     }).then(function(dbPlayers) {
-      console.log(dbPlayers);
+      // console.log(dbPlayers);
       res.json(dbPlayers);
     });
 
@@ -100,7 +100,7 @@ module.exports = function(app) {
   app.get("/api/stats/:id", function(req, res) {
     db.sequelize.query("SELECT date, points, rebounds, assists, steals, blocks FROM players INNER JOIN stats ON players.pid=stats.pid where stats.pid=" + req.params.id + " limit 10").then(function(data){
     // db.sequelize.query("SELECT Stats.date, Stats.points, Stats.rebounds, Stats.assists, Stats.steals, Stats.blocks FROM nba.Players INNER JOIN Stats ON Players.pid="+ req.params.id + " limit 10").then(function(data){
-    console.log(data);
+    // console.log(data);
     res.json(data);
     });
   });
