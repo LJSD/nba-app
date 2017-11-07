@@ -1,14 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "0038ratdog",
-    "database": "nba_stats",
-
-
-    "password": "alttimtal",
-    "database": "nba_stats",
-
-    "password": "my456123",
+    "password": "",
     "database": "nba",
     "host": "127.0.0.1",
     "dialect": "mysql"

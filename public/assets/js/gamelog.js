@@ -99,6 +99,10 @@ $('#player-stats').on('click', function(){
   getPlayerStats('9298');
 });
 
+$('#get-one').on('click', function(){
+  getOnePlayer('9298');
+});
+
 //this is where we'll make the specific query requests
 
 //query all player info from player table
@@ -115,4 +119,10 @@ function getPlayerStats(pid) {
   });
 }
 
-
+//query a specific players gamelogs with pid
+function getOnePlayer(pid) {
+  $.get("/api/oneplayer"+pid, function(data) {
+    var player = data[0][0];
+    console.log(player);
+  });
+}
