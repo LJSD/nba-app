@@ -148,6 +148,20 @@ h1 {
 	opacity: 0.9;
 }
 
+#submitForm {
+	font-size: 20px;
+	width: 200px;
+}
+#points-div {
+	padding-right: 50px; 
+}
+
+.graphController {
+	font-size: 20px;
+	width: 170px;
+	height: 40px;
+}
+
 #browsers {
 	width:100%;
 	height: 30px;
@@ -180,7 +194,10 @@ h1 {
 	height: 50px;
 	font-size: 30px;
 	width: 600px;
-
+}
+#last-game {
+	width: 280px;
+	margin-right: 20px;
 }
 /* FEATURES */
 #features {

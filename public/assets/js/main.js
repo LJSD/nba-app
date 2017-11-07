@@ -171,30 +171,40 @@ var numberData = [12, 19, 3, 5, 2, 3];
       case "Points":  
         myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        myChart.data.datasets[0].data = points;
+        myChart.data.labels = date;
         myChart.update();
         break;
     
       case "Rebounds":  
         myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(56,114,209)"];
+        myChart.data.datasets[0].data = rebounds;
+        myChart.data.labels = date;
         myChart.update();
         break;
 
       case "Assists":
         myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(55,178,164)"];
+        myChart.data.datasets[0].data = assists;
+        myChart.data.labels = date;
         myChart.update();
         break;
     
       case "Steals":
         myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(125,168,33)"];
+        myChart.data.datasets[0].data = steals;
+        myChart.data.labels = date;
         myChart.update();
         break;
     
       case "Blocks":
         myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
         myChart.data.datasets[0].borderColor = ["rgb(127,24,101)"];
+        myChart.data.datasets[0].data = blocks;
+        myChart.data.labels = date;
         myChart.update();
     }
 // >>>>>>> highlights
@@ -208,3 +218,56 @@ var numberData = [12, 19, 3, 5, 2, 3];
     // $("#myChart").html().data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
 
   })
+ 
+  var createChart = function(id){
+      // var text = $("#browsers :selected").text();
+      date = [];
+      points = [];
+      rebounds = [];
+      assists = [];
+      steals = [];
+      blocks = []; 
+
+    $.ajax("/api/stats/" + id,{
+      type: "GET"
+    }).then(function(data){
+      console.log(data);
+      console.log(data[0][0].points);
+
+      for(var i=0;i<data[0].length;i++){
+        // console.log("date is ",data[0][i]);
+        newDate = moment(data[0][i].date, "YYYY/MM/DD");
+        console.log(newDate);
+        var formattedDate = moment(newDate).format("YYYY/MM/DD");
+        date.push(formattedDate);
+        points.push(data[0][i].points);
+        rebounds.push(data[0][i].rebounds);
+        assists.push(data[0][i].assists);
+        steals.push(data[0][i].steals);
+        blocks.push(data[0][i].blocks);
+      }
+      // myChart.data.labels = date;
+      // myChart.data.datasets[0].data = points;
+      console.log(date);
+      console.log(points);
+      console.log(rebounds);
+      console.log(assists);
+      console.log(steals);
+      console.log(blocks);
+
+        myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,100,100)"];
+        myChart.data.datasets[0].data = points;
+        myChart.data.labels = date;
+        myChart.update();
+    });
+  };
+
+  $("#submitForm").on("click", function(){
+      var id = $("#browsers").val();
+      createChart(id);
+  });
+  
+  createChart("9218");
+
+  // });

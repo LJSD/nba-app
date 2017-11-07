@@ -2,8 +2,20 @@
   "development": {
     "username": "root",
 
+
     "password": "alttimtal",
     "database": "nba_stats",
+
+    "password": "alttimtal",
+    "database": "nba_stats",
+
+
+    "password": "alttimtal",
+    "database": "nba_stats",
+
+    "password": "alttimtal",
+    "database": "nba_stats",
+
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
