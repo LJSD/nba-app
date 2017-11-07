@@ -269,11 +269,21 @@ var numberData = [12, 19, 3, 5, 2, 3];
     });
   };
 
+  function generatePlayerInfo(id) {
+    $.ajax("/api/oneplayer" + id,{
+      type: "GET"
+    }).then(function(data){
+      var player = data[0][0];
+      console.log(player)
+    });
+  }
+
   $("#submitForm").on("click", function(){
       var id = $("#browsers").val();
       createChart(id);
   });
   
   createChart("9218");
+  generatePlayerInfo("9218");
 
   // });
