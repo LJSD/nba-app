@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "nba",
+    "password": "alttimtal",
+    "database": "nba_stats",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
