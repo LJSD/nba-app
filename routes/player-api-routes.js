@@ -11,9 +11,9 @@ module.exports = function(app) {
   });
 
   app.get("/api/oneplayer:id", function(req, res) {
-    pid = req.params.id;
+    id = req.params.id;
     console.log(id);
-    db.sequelize.query("SELECT * FROM Players WHERE Players.id="+id)
+    db.sequelize.query("SELECT * FROM Players WHERE Players.pid="+id)
     .then(function(data){
       res.json(data);
     });
