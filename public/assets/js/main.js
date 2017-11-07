@@ -354,11 +354,11 @@ var numberData = [12, 19, 3, 5, 2, 3];
   };
 
   function generatePlayerInfo(id) {
-    $.ajax("/api/oneplayer" + id,{
+    $.ajax("/api/one" + id,{
       type: "GET"
     }).then(function(data){
       var player = data[0][0];
-      console.log(player)
+      console.log(player);
     });
   }
 
@@ -371,6 +371,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
   createChart("9218", "9298");
   // myChart.data.datasets[0].label = "Stephan Points";
   // myChart.data.datasets[1].label = "Green Points";
+
+  generatePlayerInfo('9298');
 
 
 
