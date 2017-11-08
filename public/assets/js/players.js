@@ -25,9 +25,6 @@ var playerProfiles = function() {
   }).done(function(response) {
     for (var i = 0; i < response.rosterplayers.playerentry.length; i++) {
       var player = response.rosterplayers.playerentry;
-      console.log(response);
-      console.log(player);
-      console.log('id: ' + player[i].player.ID);
       var pid = player[i].player.ID;
       var firstName = player[i].player.FirstName;
       var lastName = player[i].player.LastName;
@@ -57,8 +54,12 @@ var playerProfiles = function() {
 
 $('#players').on('click', function() {
   event.preventDefault();
-  playerProfiles(); 
+  playerProfiles();
 });
+
+function updatePlayerInfo(elementId) {
+
+}
 
 
 // var cummulativeStats = function() {

@@ -368,6 +368,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
       var id = $("#browsers").val();
       var id2 = $("#browsers2").val();
       createChart(id, id2);
+      displayPlayerDemoInfo(id, id2);
   });
   
   createChart("9218", "9298");
@@ -379,6 +380,32 @@ function displayLabelWhenPageLoad (){
       // console.log("timeout!!");
 };
 setTimeout(displayLabelWhenPageLoad, 1000 * 1);
+
+//Display player demographic info
+function displayPlayerDemoInfo(id, id2) {
+  console.log("hey");
+  $.ajax("/api/one" + id, {
+    type: "GET",
+  }) 
+  .then(function(res) {
+    var player = res[0][0];
+    $("#player1-name").html(player.player_name);
+
+    console.log(res);
+  });
+  $.ajax("/api/one" + id2, {
+    type: "GET",
+  }) 
+  .then(function(res) {
+    var player = res[0][0];
+    $("#player2-name").html(player.player_name);
+
+    console.log(res);
+  });
+
+};
+
+
 
 generatePlayerInfo('9298');
 

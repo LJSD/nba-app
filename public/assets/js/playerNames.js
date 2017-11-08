@@ -15,8 +15,6 @@ function getPlayers() {
      // console.log(list);
     	
      div.html(list);
-
-    // console.log($("#playerChooser").html());
   });
 }
 function getPlayers2() {
@@ -40,17 +38,18 @@ function getPlayers2() {
   });
 }
 
-function displayPlayer() {
-    $("#submitForm").on("click", function() {
-        var player = $("#browsers").val();
-        var text = $("#browsers :selected").text();
+// function displayPlayer() {
+//     $("#submitForm").on("click", function() {
+//         var player = $("#browsers").val();
+//         var text = $("#browsers :selected").text();
+//         alert("Hi");
 
-        $("#spotlight").html('<h3>' + text + '</h3>');
-        console.log(player);
-        console.log(text);
-        console.log('hello world')
-    });
-};
+//         $("#spotlight").html('<h3>' + text + '</h3>');
+//         console.log(player);
+//         console.log(text);
+//         console.log('hello world')
+//     });
+// };
 getPlayers();
 getPlayers2();
 // displayPlayer();
