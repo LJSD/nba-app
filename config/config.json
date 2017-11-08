@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "wuthjg6r3fwk2xlg",
-    "password": "o97qha9cot2nw8ok",
-    "database": "vs5ztwpjzmi4a23g",
-    "host": "erxv1bzckceve5lh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "alttimtal",
+    "database": "nba_stats",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

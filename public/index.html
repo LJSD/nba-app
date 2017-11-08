@@ -140,21 +140,13 @@
 
 	<script type="text/javascript">
 		function checkLoginStatus() {
-			if(localStorage.getItem('loggedin') === true) {
+			if(localStorage.getItem('loggedin') === "true") {
 				$("#signup").html('<a href="/account">Account</a>');
 				$("#login-link").html('<a href="/logout">Logout</a>');	
 			}
 		}
-		//instance of the main object
-		function signupHTML(success) {
-			if(success){
-				$("#signup").html('<a href="/account">Account</a>');
-				$("#login-link").html('<a href="/logout">Logout</a>');
-			}
-		};
 		checkLoginStatus();
-		var user = new Account();
-		user.checkLoginStatus(signupHTML);
+		
 	</script>
 	<script type="text/javascript" src="assets/js/nba_stats_api.js"></script>
 	<script type="text/javascript">

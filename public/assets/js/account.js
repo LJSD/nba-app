@@ -9,8 +9,12 @@ function Account() {
 //is already logged in. 
 Account.prototype.checkLoginStatus = function(cb) {
 	var userInfo = this.getLoginInfo();
-	if(userInfo){
+	if(userInfo[0] != "null"){
+		console.log(userInfo);
 		this.doLogin(userInfo[0], userInfo[1], cb);
+	}else{
+		localStorage.setItem('loggedin', false);
+		cb(false);
 	}
 }
 //Once the system has the email and password value, we want to comapre them against the database
@@ -20,7 +24,6 @@ Account.prototype.doLogin = function(email, password, cb) {
 	    .done(function(result) {
 	        var res = JSON.parse(result);
 	        /* if successful, direct them to the home page */
-	        
 	        if(res.success){
 	        	self.setLoginInfo(email, password);
 	        	if(cb) {
