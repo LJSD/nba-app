@@ -376,6 +376,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
 function displayLabelWhenPageLoad (){
       myChart.data.datasets[0].label = "Curry, Stephen";
       myChart.data.datasets[1].label = "Barnes, Matt";
+      playerName = "Curry, Stephen";
+      playerName2 = "Barnes, Matt";
       myChart.update();
       // console.log("timeout!!");
 };
