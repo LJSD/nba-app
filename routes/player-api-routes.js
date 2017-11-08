@@ -20,18 +20,9 @@ module.exports = function(app) {
   });
 
   app.get("/api/players", function(req, res) {
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Post
-    // console.log(db.Player);
-    db.Players.findAll({
-      // where: {
-      //   pid: '9298'
-      // },
-      include: [db.Stats]
-    }).then(function(dbPlayers) {
-      // console.log(dbPlayers);
-      res.json(dbPlayers);
+   db.sequelize.query("SELECT * FROM Players")
+    .then(function(data){
+      res.json(data);
     });
 
   });
