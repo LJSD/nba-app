@@ -17,7 +17,9 @@ function newAccount() {
         .done(function(result) {
             var account = new Account();
             account.setLoginInfo(newUser.email, newUser.password);
-            addModal();
+            setTimeout(function() {
+              window.location.href = "/";
+            }, 1000)
         });
 
         // Empty each input box by replacing the value with an empty string

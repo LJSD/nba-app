@@ -244,6 +244,9 @@ h1 {
 #main-footer {
 	background: #000066;
 	color: grey;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 /*MY ACCOUNT FORM*/
