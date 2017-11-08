@@ -10,7 +10,12 @@ var gameLogStats = function() {
   var password = "09081983";
   var queryDate = '20161232';
   var queryURL ='https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/player_gamelogs.json?team=gsw';
-  var teams = ['atl', 'brooklyn-nets', 'bos', 'cha', 'chi', 'cle', 'dal', 'den', 'det', 'gsw', 'hou', 'ind', 'lac', 'lal', 'mem', 'mia', 'mil', 'min', 'nop', 'nyk', 'okc', 'orl', 'phi', 'phx', 'por', 'sac', 'sas', 'tor', 'uta', 'was'];
+  // var teams = ['atl', 'brooklyn-nets', 'bos', 'cha', 'chi'];
+  var teams1 = ['cle', 'dal', 'den', 'det', 'gsw'];
+  var teams2 = ['hou', 'ind', 'lac', 'lal', 'mem', 'mia'];
+  var teams3 = ['mil', 'min', 'nop', 'nyk', 'okc', 'orl'];
+  var teams4 = ['phi', 'phx', 'por', 'sac', 'sas', 'tor'];
+  var teams5 = ['uta', 'was'];
 
   for (var i = 0; i < teams.length; i++) {
     console.log(teams[i]);
