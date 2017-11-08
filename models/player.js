@@ -13,14 +13,14 @@ module.exports = function(sequelize, DataTypes) {
     freezeTableName: true
   });
 
-  Players.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Players.hasMany(models.Stats, {
-       foreignKey: 'pid'
-       // targetKey: 'pid'
-    });
-  };
+  // Players.associate = function(models) {
+  //   // Associating Author with Posts
+  //   // When an Author is deleted, also delete any associated Posts
+  //   Players.hasMany(models.Stats, {
+  //      foreignKey: 'pid'
+  //      // targetKey: 'pid'
+  //   });
+  // };
 
   return Players;
 };

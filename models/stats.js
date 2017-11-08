@@ -14,12 +14,12 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     freezeTableName: true
   });
-  Stats.associate = function(models){
-    Stats.belongsTo(models.Players, {
-      foreignKey: 'pid'
-      // targetKey: 'pid'
-    });
-  }
+  // Stats.associate = function(models){
+  //   Stats.belongsTo(models.Players, {
+  //     foreignKey: 'pid'
+  //     // targetKey: 'pid'
+  //   });
+  // }
 
   return Stats;
 };
