@@ -1,13 +1,13 @@
 
 function getPlayers() {
   $.get("/api/players", function(data) {
-    // console.log(data);
+    console.log(data);
 
     div = $("#playerChooser")
 
      var list = "<form><select id = 'browsers'>";
-     for (var i = 0; i < data.length; i++) {
-     	list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
+     for (var i = 0; i < data[0].length; i++) {
+     	list += "<option value = '" + data[0][i].pid + "'>" + data[0][i].player_name + "</option>"
      };
 
      list += "  <option value='9218' selected>Curry, Stephen</option></select></form>"
@@ -26,8 +26,8 @@ function getPlayers2() {
     div = $("#playerChooser2")
 
      var list = "<form><select id = 'browsers2'>";
-     for (var i = 0; i < data.length; i++) {
-        list += "<option value = '" + data[i].pid + "'>" + data[i].player_name + "</option>"
+     for (var i = 0; i < data[0].length; i++) {
+        list += "<option value = '" + data[0][i].pid + "'>" + data[0][i].player_name + "</option>"
      };
 
      list += "  <option value='9298' selected>Barnes, Matt</option></select></form>"

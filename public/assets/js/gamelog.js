@@ -9,9 +9,14 @@ var gameLogStats = function() {
   var username = "deevine";
   var password = "09081983";
   var queryDate = '20161232';
-  var queryURL = 'https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/player_gamelogs.json?team=gsw'
+  var queryURL ='https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/player_gamelogs.json?team=gsw';
+  var teams = ['atl', 'brooklyn-nets', 'bos', 'cha', 'chi', 'cle', 'dal', 'den', 'det', 'gsw', 'hou', 'ind', 'lac', 'lal', 'mem', 'mia', 'mil', 'min', 'nop', 'nyk', 'okc', 'orl', 'phi', 'phx', 'por', 'sac', 'sas', 'tor', 'uta', 'was'];
 
-  $.ajax
+  for (var i = 0; i < teams.length; i++) {
+    console.log(teams[i]);
+    queryURL =   'https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/player_gamelogs.json?team=' + teams[i];
+    console.log(queryURL);
+    $.ajax
   ({
     type: "GET",
     url: queryURL,
@@ -21,41 +26,43 @@ var gameLogStats = function() {
       "Authorization": "Basic " + btoa(username + ":" + password)
     },
     success: function (){
-      alert('Query Sucessful'); 
+      // alert('Query Sucessful'); 
     }
-  }).done(function(response) {
-
-    for (var i = 0; i < response.playergamelogs.gamelogs.length; i++) {
+    }).done(function(response) {
       console.log(response);
-      var gamelog = response.playergamelogs.gamelogs[i];
-      var date = gamelog.game.date;
-      date = date.replace(/-/g,'');
-      var time = gamelog.game.time;
-      var city = gamelog.game.homeTeam.City;
-      var pid = gamelog.player.ID;
-      var points = gamelog.stats.Pts['#text'];
-      var assists = gamelog.stats.Ast['#text'];
-      var rebounds = gamelog.stats.Reb['#text'];
-      var steals = gamelog.stats.Stl['#text'];
-      var blocks = gamelog.stats.Blk['#text'];
-      var turnovers = gamelog.stats.Tov['#text'];
-      console.log(pid, date, time, city, points, assists, rebounds, steals, blocks, turnovers);
+      for (var i = 0; i < response.playergamelogs.gamelogs.length; i++) {
+        // console.log(response);
+        var gamelog = response.playergamelogs.gamelogs[i];
+        var date = gamelog.game.date;
+        date = date.replace(/-/g,'');
+        var time = gamelog.game.time;
+        var city = gamelog.game.homeTeam.City;
+        var pid = gamelog.player.ID;
+        var points = gamelog.stats.Pts['#text'];
+        var assists = gamelog.stats.Ast['#text'];
+        var rebounds = gamelog.stats.Reb['#text'];
+        var steals = gamelog.stats.Stl['#text'];
+        var blocks = gamelog.stats.Blk['#text'];
+        var turnovers = gamelog.stats.Tov['#text'];
+        console.log(pid, date, time, city, points, assists, rebounds, steals, blocks, turnovers);
 
-      sendStats({
-        date: date,
-        time: time,
-        city: city,
-        pid: pid,
-        points: points,
-        assists: assists,
-        rebounds: rebounds,
-        steals: steals,
-        blocks: blocks,
-        turnovers: turnovers
-      });
-    }
-  });  
-}   
+        sendStats({
+          date: date,
+          time: time,
+          city: city,
+          pid: pid,
+          points: points,
+          assists: assists,
+          rebounds: rebounds,
+          steals: steals,
+          blocks: blocks,
+          turnovers: turnovers
+        });
+      }
+    });  
+  } 
+}
+    
 
 var weather = function(location, date) {
   var apikey = '60b18c12e98e451fa5a192111170311';
