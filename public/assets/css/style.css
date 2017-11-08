@@ -241,12 +241,15 @@ h1 {
 }
 
 /* FOOTER */
-#main-footer {
+#main-footer, #login-page-footer {
 	background: #000066;
 	color: grey;
-	position: fixed;
 	bottom: 0;
 	width: 100%;
+}
+
+#login-page-footer {
+	position: fixed;
 }
 
 /*MY ACCOUNT FORM*/
@@ -465,4 +468,25 @@ button {
 #trending-span {
 	font-style: italic;
 } 
+/*Demographic Info on Stats Page*/
+#player1-info-div, #player2-info-div {
+	font-size: 11px;
+	margin-left: 5px;
+}
 
+#player1-info-div {
+	margin-bottom: 10px;
+	color: #FFA500;
+	font-weight: bold;
+	line-height: 1.5em; 
+}
+#player2-info-div {
+	color: red;
+	font-weight: bold;
+	line-height: 1.5em; 
+}
+#coming-soon-div {
+	margin-top: 200px; 
+	font-weight: bold;
+	font-style: italic;
+}

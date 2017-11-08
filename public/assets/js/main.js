@@ -383,29 +383,35 @@ setTimeout(displayLabelWhenPageLoad, 1000 * 1);
 
 //Display player demographic info
 function displayPlayerDemoInfo(id, id2) {
-  console.log("hey");
   $.ajax("/api/one" + id, {
     type: "GET",
   }) 
   .then(function(res) {
-    var player = res[0][0];
-    $("#player1-name").html(player.player_name);
-
     console.log(res);
+    var player = res[0][0];
+    $("#player1-name").html("Name: " + player.player_name);
+    $("#player1-age").html("Age: " + player.age);
+    $("#player1-birthDate").html("Birth date: " + player.birthDate);
+    $("#player1-birthCountry").html("Birth country: " + player.birthCountry);
+    $("#player1-height").html("Height: " + player.height);
+    $("#player1-weight").html("Weight: " + player.weight);
+    $("#player1-position").html("Position: " + player.position);
   });
+
   $.ajax("/api/one" + id2, {
     type: "GET",
   }) 
   .then(function(res) {
     var player = res[0][0];
-    $("#player2-name").html(player.player_name);
-
-    console.log(res);
+    $("#player2-name").html("Name: " + player.player_name);
+    $("#player2-age").html("Age: " + player.age);
+    $("#player2-birthDate").html("Birth date: " + player.birthDate);
+    $("#player2-birthCountry").html("Birth country: " + player.birthCountry);
+    $("#player2-height").html("Height: " + player.height);
+    $("#player2-weight").html("Weight: " + player.weight);
+    $("#player2-position").html("Position: " + player.position);
   });
-
 };
-
-
 
 generatePlayerInfo('9298');
 
