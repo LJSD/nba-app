@@ -311,8 +311,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
       console.log(steals);
       console.log(blocks);
 
-        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,00)"];
+        myChart.data.datasets[0].backgroundColor = ["rgba(255,180,00,0.1)"];
+        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
         myChart.data.datasets[0].data = points;
         myChart.data.labels = date;
         myChart.data.datasets[0].label = playerName;
@@ -346,7 +346,7 @@ var numberData = [12, 19, 3, 5, 2, 3];
       console.log(steals);
       console.log(blocks);
 
-        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+        myChart.data.datasets[1].backgroundColor = ["rgba(255,60,0,0.1)"];
         myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
         myChart.data.datasets[1].data = points2;
         myChart.data.labels = date;
