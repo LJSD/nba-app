@@ -5,7 +5,7 @@ function NbaStatsAPI(){
 
 NbaStatsAPI.prototype.loadScores = function(){
 	var jDiv = this.jDiv;
-	var statsUrl = "http://stats.nba.com/stats/scoreboard/?GameDate= " + this.date + "&LeagueID=00&DayOffset=0";
+	var statsUrl = "https://stats.nba.com/stats/scoreboard/?GameDate= " + this.date + "&LeagueID=00&DayOffset=0";
 	var date = this.date;
 	$.ajax({
 		url: statsUrl,
