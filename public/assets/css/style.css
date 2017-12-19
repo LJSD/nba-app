@@ -158,6 +158,8 @@ h1 {
 #submitForm {
 	font-size: 20px;
 	width: 200px;
+	background-color: #ff7a2d;
+	font-weight: bold;
 }
 #points-div {
 	padding-right: 50px; 
