@@ -166,6 +166,8 @@ var numberData = [12, 19, 3, 5, 2, 3];
           }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio:false,
           scales: {
               yAxes: [{
                   ticks: {
