@@ -376,7 +376,7 @@ function onload(){
         var id = $("#browsers").val();
         var id2 = $("#browsers2").val();
         createChart(id, id2);
-        displayPlayerDemoInfo(id, id2);
+        // displayPlayerDemoInfo(id, id2);
     });
     
     createChart("9218", "9298");
