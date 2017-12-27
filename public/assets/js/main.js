@@ -171,9 +171,14 @@ var numberData = [12, 19, 3, 5, 2, 3];
           scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero:true
+                      beginAtZero:true,
                   }
-              }]
+              }],
+              xAxes: [{
+                  ticks: {
+                      autoSkip: false,
+                  }
+              }],
           }
       }
   });
