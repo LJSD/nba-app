@@ -132,7 +132,7 @@ h1 {
 #playerStats {
 	/*background: url("../images/basketball6.jpg") no-repeat center center;*/
 	background-size: cover;
-	border-bottom: 1px solid black; 
+	/*border-bottom: 1px solid black; */
 	margin-bottom: 30px;
 }
 #playerStats.row {
