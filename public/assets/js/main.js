@@ -324,7 +324,7 @@ function onload(){
           myChart.data.datasets[0].data = points;
           myChart.data.labels = date;
           myChart.data.datasets[0].label = playerName;
-          // myChart.update();
+          myChart.update();
       });
       // -----------------------------------------------------------
           $.ajax("/api/stats/" + id2,{
