@@ -125,303 +125,304 @@ searchOption();
 goBackToHome();
 
 
-//PlayerStats Graphs
+function onload(){
+  //PlayerStats Graphs
 
-var ctx = document.getElementById("myChart").getContext("2d");
-// =======
-// data
-var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
-var numberData = [12, 19, 3, 5, 2, 3];
+  var ctx = document.getElementById("myChart").getContext("2d");
+  // =======
+  // data
+  var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+  var numberData = [12, 19, 3, 5, 2, 3];
 
- // var graph = $("#graphs").html();
- var ctx = document.getElementById("myChart").getContext("2d");
-// >>>>>>> highlights
+   // var graph = $("#graphs").html();
+   var ctx = document.getElementById("myChart").getContext("2d");
+  // >>>>>>> highlights
 
-  var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-          labels: colors,
-          datasets: [{
-              label: '# of Votes',
-              lineTension: 0.15,
-              data: numberData,
-              backgroundColor: [
-                  'rgba(255, 159, 64, 0)'
-              ],
-              borderColor: [
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 2
-          },{
-              label: '# of Votes',
-              lineTension: 0.15,
-              data: numberData,
-              backgroundColor: [
-                  'rgba(255, 159, 64, 0)'
-              ],
-              borderColor: [
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 2
-          }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio:false,
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true,
-                  }
-              }],
-              xAxes: [{
-                  ticks: {
-                      autoSkip: false,
-                  }
-              }],
-          }
-      }
-  });
-
-  $(".graphController").on("click", function() {
-    $("#currentChart").html($(this).html());
-
-
-    switch ($(this).html()) {
-
-      case "Points":  
-        // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = points;
-        myChart.data.datasets[0].label = playerName;
-        myChart.data.labels = date;
-        // myChart.data.datasets[1].backgroundColor = ["rgba(255,100,100,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = points2;
-        myChart.data.datasets[1].label = playerName2;
-        myChart.data.labels = date;
-        myChart.update();
-        break;
-    
-      case "Rebounds":  
-        // myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = rebounds;
-        myChart.data.datasets[0].label = playerName;
-        myChart.data.labels = date;
-        // myChart.data.datasets[1].backgroundColor = ["rgba(56, 114,209,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = rebounds2;
-        myChart.data.datasets[1].label = playerName2;
-        myChart.data.labels = date;        
-        myChart.update();
-        break;
-
-      case "Assists":
-        // myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = assists;
-        myChart.data.datasets[0].label = playerName;
-        myChart.data.labels = date;
-        // myChart.data.datasets[1].backgroundColor = ["rgba(55, 178, 164,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = assists2;
-        myChart.data.datasets[1].label = playerName2;
-        myChart.data.labels = date;
-        myChart.update();
-        break;
-    
-      case "Steals":
-        // myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = steals;
-        myChart.data.datasets[0].label = playerName;
-        myChart.data.labels = date;
-        // myChart.data.datasets[1].backgroundColor = ["rgba(125, 168, 33,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = steals2;
-        myChart.data.datasets[1].label = playerName2;
-        myChart.data.labels = date;
-        myChart.update();
-        break;
-    
-      case "Blocks":
-        // myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = blocks;
-        myChart.data.datasets[0].label = playerName;
-        myChart.data.labels = date;
-        // myChart.data.datasets[1].backgroundColor = ["rgba(127, 24, 101,0.2)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = blocks2;
-        myChart.data.datasets[1].label = playerName2;
-        myChart.data.labels = date;
-        myChart.update();
-    }
-// >>>>>>> highlights
-
-    myChart.update();
-    console.log($(this).html());
-    console.log(myChart.data.datasets[0].backgroundColor)
-
-
-    
-    // $("#myChart").html().data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
-
-  })
-  
-  var playerName;
-  var playerName2;
-
-  var createChart = function(id, id2){
-      playerName = $("#browsers :selected").text();
-      playerName2 = $("#browsers2 :selected").text();
-
-      date = [];
-      points = [];
-      rebounds = [];
-      assists = [];
-      steals = [];
-      blocks = []; 
-
-      date2 = [];
-      points2 = [];
-      rebounds2 = [];
-      assists2 = [];
-      steals2 = [];
-      blocks2 = []; 
-
-    $.ajax("/api/stats/" + id,{
-      type: "GET"
-    }).then(function(data){
-      console.log(data);
-      console.log(data[0][0].points);
-
-      for(var i=0;i<data[0].length;i++){
-        // console.log("date is ",data[0][i]);
-        newDate = moment(data[0][i].date, "YYYY/MM/DD");
-        console.log(newDate);
-        var formattedDate = moment(newDate).format("YYYY/MM/DD");
-        date.push(formattedDate);
-        points.push(data[0][i].points);
-        rebounds.push(data[0][i].rebounds);
-        assists.push(data[0][i].assists);
-        steals.push(data[0][i].steals);
-        blocks.push(data[0][i].blocks);
-      }
-      // myChart.data.labels = date;
-      // myChart.data.datasets[0].data = points;
-      console.log(date);
-      console.log(points);
-      console.log(rebounds);
-      console.log(assists);
-      console.log(steals);
-      console.log(blocks);
-
-        myChart.data.datasets[0].backgroundColor = ["rgba(255,180,00,0.1)"];
-        myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
-        myChart.data.datasets[0].data = points;
-        myChart.data.labels = date;
-        myChart.data.datasets[0].label = playerName;
-        // myChart.update();
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: colors,
+            datasets: [{
+                label: '# of Votes',
+                lineTension: 0.15,
+                data: numberData,
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 2
+            },{
+                label: '# of Votes',
+                lineTension: 0.15,
+                data: numberData,
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio:false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        autoSkip: false,
+                    }
+                }],
+            }
+        }
     });
-    // -----------------------------------------------------------
-        $.ajax("/api/stats/" + id2,{
-      type: "GET"
-    }).then(function(data){
-      console.log(data);
-      console.log(data[0][0].points);
 
-      for(var i=0;i<data[0].length;i++){
-        // console.log("date is ",data[0][i]);
-        newDate = moment(data[0][i].date, "YYYY/MM/DD");
-        console.log(newDate);
-        var formattedDate = moment(newDate).format("YYYY/MM/DD");
-        date2.push(formattedDate);
-        points2.push(data[0][i].points);
-        rebounds2.push(data[0][i].rebounds);
-        assists2.push(data[0][i].assists);
-        steals2.push(data[0][i].steals);
-        blocks2.push(data[0][i].blocks);
+    $(".graphController").on("click", function() {
+      $("#currentChart").html($(this).html());
+
+
+      switch ($(this).html()) {
+
+        case "Points":  
+          // myChart.data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = points;
+          myChart.data.datasets[0].label = playerName;
+          myChart.data.labels = date;
+          // myChart.data.datasets[1].backgroundColor = ["rgba(255,100,100,0.2)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = points2;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.data.labels = date;
+          myChart.update();
+          break;
+      
+        case "Rebounds":  
+          // myChart.data.datasets[0].backgroundColor = ["rgba(56, 114,209,0.2)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = rebounds;
+          myChart.data.datasets[0].label = playerName;
+          myChart.data.labels = date;
+          // myChart.data.datasets[1].backgroundColor = ["rgba(56, 114,209,0.2)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = rebounds2;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.data.labels = date;        
+          myChart.update();
+          break;
+
+        case "Assists":
+          // myChart.data.datasets[0].backgroundColor = ["rgba(55, 178, 164,0.2)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = assists;
+          myChart.data.datasets[0].label = playerName;
+          myChart.data.labels = date;
+          // myChart.data.datasets[1].backgroundColor = ["rgba(55, 178, 164,0.2)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = assists2;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.data.labels = date;
+          myChart.update();
+          break;
+      
+        case "Steals":
+          // myChart.data.datasets[0].backgroundColor = ["rgba(125, 168, 33,0.2)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = steals;
+          myChart.data.datasets[0].label = playerName;
+          myChart.data.labels = date;
+          // myChart.data.datasets[1].backgroundColor = ["rgba(125, 168, 33,0.2)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = steals2;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.data.labels = date;
+          myChart.update();
+          break;
+      
+        case "Blocks":
+          // myChart.data.datasets[0].backgroundColor = ["rgba(127, 24, 101,0.2)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = blocks;
+          myChart.data.datasets[0].label = playerName;
+          myChart.data.labels = date;
+          // myChart.data.datasets[1].backgroundColor = ["rgba(127, 24, 101,0.2)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = blocks2;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.data.labels = date;
+          myChart.update();
       }
-      // myChart.data.labels = date;
-      // myChart.data.datasets[0].data = points;
-      console.log(date);
-      console.log(points);
-      console.log(rebounds);
-      console.log(assists);
-      console.log(steals);
-      console.log(blocks);
+  // >>>>>>> highlights
 
-        myChart.data.datasets[1].backgroundColor = ["rgba(255,60,0,0.1)"];
-        myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
-        myChart.data.datasets[1].data = points2;
-        myChart.data.labels = date;
-        myChart.data.datasets[1].label = playerName2;
+      myChart.update();
+      console.log($(this).html());
+      console.log(myChart.data.datasets[0].backgroundColor)
+
+
+      
+      // $("#myChart").html().data.datasets[0].backgroundColor = ["rgba(255,100,100,0.2)"];
+
+    })
+    
+    var playerName;
+    var playerName2;
+
+    var createChart = function(id, id2){
+        playerName = $("#browsers :selected").text();
+        playerName2 = $("#browsers2 :selected").text();
+
+        date = [];
+        points = [];
+        rebounds = [];
+        assists = [];
+        steals = [];
+        blocks = []; 
+
+        date2 = [];
+        points2 = [];
+        rebounds2 = [];
+        assists2 = [];
+        steals2 = [];
+        blocks2 = []; 
+
+      $.ajax("/api/stats/" + id,{
+        type: "GET"
+      }).then(function(data){
+        console.log(data);
+        console.log(data[0][0].points);
+
+        for(var i=0;i<data[0].length;i++){
+          // console.log("date is ",data[0][i]);
+          newDate = moment(data[0][i].date, "YYYY/MM/DD");
+          console.log(newDate);
+          var formattedDate = moment(newDate).format("YYYY/MM/DD");
+          date.push(formattedDate);
+          points.push(data[0][i].points);
+          rebounds.push(data[0][i].rebounds);
+          assists.push(data[0][i].assists);
+          steals.push(data[0][i].steals);
+          blocks.push(data[0][i].blocks);
+        }
+        // myChart.data.labels = date;
+        // myChart.data.datasets[0].data = points;
+        console.log(date);
+        console.log(points);
+        console.log(rebounds);
+        console.log(assists);
+        console.log(steals);
+        console.log(blocks);
+
+          myChart.data.datasets[0].backgroundColor = ["rgba(255,180,00,0.1)"];
+          myChart.data.datasets[0].borderColor = ["rgb(255,180,0)"];
+          myChart.data.datasets[0].data = points;
+          myChart.data.labels = date;
+          myChart.data.datasets[0].label = playerName;
+          // myChart.update();
+      });
+      // -----------------------------------------------------------
+          $.ajax("/api/stats/" + id2,{
+        type: "GET"
+      }).then(function(data){
+        console.log(data);
+        console.log(data[0][0].points);
+
+        for(var i=0;i<data[0].length;i++){
+          // console.log("date is ",data[0][i]);
+          newDate = moment(data[0][i].date, "YYYY/MM/DD");
+          console.log(newDate);
+          var formattedDate = moment(newDate).format("YYYY/MM/DD");
+          date2.push(formattedDate);
+          points2.push(data[0][i].points);
+          rebounds2.push(data[0][i].rebounds);
+          assists2.push(data[0][i].assists);
+          steals2.push(data[0][i].steals);
+          blocks2.push(data[0][i].blocks);
+        }
+        // myChart.data.labels = date;
+        // myChart.data.datasets[0].data = points;
+        console.log(date);
+        console.log(points);
+        console.log(rebounds);
+        console.log(assists);
+        console.log(steals);
+        console.log(blocks);
+
+          myChart.data.datasets[1].backgroundColor = ["rgba(255,60,0,0.1)"];
+          myChart.data.datasets[1].borderColor = ["rgb(255,60,0)"];
+          myChart.data.datasets[1].data = points2;
+          myChart.data.labels = date;
+          myChart.data.datasets[1].label = playerName2;
+          myChart.update();
+      });
+    };
+
+    function generatePlayerInfo(id) {
+      $.ajax("/api/one" + id,{
+        type: "GET"
+      }).then(function(data){
+        var player = data[0][0];
+        console.log(player);
+      });
+    }
+
+    $("#submitForm").on("click", function(){
+        var id = $("#browsers").val();
+        var id2 = $("#browsers2").val();
+        createChart(id, id2);
+        displayPlayerDemoInfo(id, id2);
+    });
+    
+    createChart("9218", "9298");
+
+  function displayLabelWhenPageLoad (){
+        myChart.data.datasets[0].label = "Curry, Stephen";
+        myChart.data.datasets[1].label = "Barnes, Matt";
+        playerName = "Curry, Stephen";
+        playerName2 = "Barnes, Matt";
         myChart.update();
+        // console.log("timeout!!");
+  };
+  setTimeout(displayLabelWhenPageLoad, 1000 * 1);
+
+  //Display player demographic info
+  function displayPlayerDemoInfo(id, id2) {
+    $.ajax("/api/one" + id, {
+      type: "GET",
+    }) 
+    .then(function(res) {
+      console.log(res);
+      var player = res[0][0];
+      $("#player1-name").html("Name: " + player.player_name);
+      $("#player1-age").html("Age: " + player.age);
+      $("#player1-birthDate").html("Birth date: " + player.birthDate);
+      $("#player1-birthCountry").html("Birth country: " + player.birthCountry);
+      $("#player1-height").html("Height: " + player.height);
+      $("#player1-weight").html("Weight: " + player.weight);
+      $("#player1-position").html("Position: " + player.position);
+    });
+
+    $.ajax("/api/one" + id2, {
+      type: "GET",
+    }) 
+    .then(function(res) {
+      var player = res[0][0];
+      $("#player2-name").html("Name: " + player.player_name);
+      $("#player2-age").html("Age: " + player.age);
+      $("#player2-birthDate").html("Birth date: " + player.birthDate);
+      $("#player2-birthCountry").html("Birth country: " + player.birthCountry);
+      $("#player2-height").html("Height: " + player.height);
+      $("#player2-weight").html("Weight: " + player.weight);
+      $("#player2-position").html("Position: " + player.position);
     });
   };
 
-  function generatePlayerInfo(id) {
-    $.ajax("/api/one" + id,{
-      type: "GET"
-    }).then(function(data){
-      var player = data[0][0];
-      console.log(player);
-    });
-  }
+  generatePlayerInfo('9298');
 
-  $("#submitForm").on("click", function(){
-      var id = $("#browsers").val();
-      var id2 = $("#browsers2").val();
-      createChart(id, id2);
-      displayPlayerDemoInfo(id, id2);
-  });
-  
-  createChart("9218", "9298");
-
-function displayLabelWhenPageLoad (){
-      myChart.data.datasets[0].label = "Curry, Stephen";
-      myChart.data.datasets[1].label = "Barnes, Matt";
-      playerName = "Curry, Stephen";
-      playerName2 = "Barnes, Matt";
-      myChart.update();
-      // console.log("timeout!!");
-};
-setTimeout(displayLabelWhenPageLoad, 1000 * 1);
-
-//Display player demographic info
-function displayPlayerDemoInfo(id, id2) {
-  $.ajax("/api/one" + id, {
-    type: "GET",
-  }) 
-  .then(function(res) {
-    console.log(res);
-    var player = res[0][0];
-    $("#player1-name").html("Name: " + player.player_name);
-    $("#player1-age").html("Age: " + player.age);
-    $("#player1-birthDate").html("Birth date: " + player.birthDate);
-    $("#player1-birthCountry").html("Birth country: " + player.birthCountry);
-    $("#player1-height").html("Height: " + player.height);
-    $("#player1-weight").html("Weight: " + player.weight);
-    $("#player1-position").html("Position: " + player.position);
-  });
-
-  $.ajax("/api/one" + id2, {
-    type: "GET",
-  }) 
-  .then(function(res) {
-    var player = res[0][0];
-    $("#player2-name").html("Name: " + player.player_name);
-    $("#player2-age").html("Age: " + player.age);
-    $("#player2-birthDate").html("Birth date: " + player.birthDate);
-    $("#player2-birthCountry").html("Birth country: " + player.birthCountry);
-    $("#player2-height").html("Height: " + player.height);
-    $("#player2-weight").html("Weight: " + player.weight);
-    $("#player2-position").html("Position: " + player.position);
-  });
-};
-
-generatePlayerInfo('9298');
-
-
+}
