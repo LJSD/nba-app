@@ -274,9 +274,8 @@ function onload(){
     var playerName;
     var playerName2;
 
-    var createChart = function(id, id2){
+    var createChart = function(id){
         playerName = $("#browsers :selected").text();
-        playerName2 = $("#browsers2 :selected").text();
 
         date = [];
         points = [];
@@ -284,13 +283,6 @@ function onload(){
         assists = [];
         steals = [];
         blocks = []; 
-
-        date2 = [];
-        points2 = [];
-        rebounds2 = [];
-        assists2 = [];
-        steals2 = [];
-        blocks2 = []; 
 
       $.ajax("/api/stats/" + id,{
         type: "GET"
@@ -326,6 +318,18 @@ function onload(){
           myChart.data.datasets[0].label = playerName;
           myChart.update();
       });
+    };
+
+    var createChart2 = function(id2){
+        playerName2 = $("#browsers2 :selected").text();
+
+        date2 = [];
+        points2 = [];
+        rebounds2 = [];
+        assists2 = [];
+        steals2 = [];
+        blocks2 = []; 
+
       // -----------------------------------------------------------
           $.ajax("/api/stats/" + id2,{
         type: "GET"
@@ -372,14 +376,24 @@ function onload(){
       });
     }
 
-    $("#submitForm").on("click", function(){
-        var id = $("#browsers").val();
-        var id2 = $("#browsers2").val();
-        createChart(id, id2);
-        // displayPlayerDemoInfo(id, id2);
+    // $("#submitForm").on("click", function(){
+    //     var id = $("#browsers").val();
+    //     var id2 = $("#browsers2").val();
+    //     createChart(id, id2);
+    // });
+
+    $("#browsers").change(function(){
+      var id = $("#browsers").val();
+      createChart(id);
+    });
+
+    $("#browsers2").change(function(){
+      var id2 = $("#browsers2").val();
+      createChart2(id2);
     });
     
-    createChart("9218", "9298");
+    createChart("9218");
+    createChart2("9298");
 
   function displayLabelWhenPageLoad (){
         myChart.data.datasets[0].label = "Curry, Stephen";
